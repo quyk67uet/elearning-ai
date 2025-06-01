@@ -50,8 +50,11 @@ COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 # 12. Cài đặt dependencies của app elearning
 RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
 
+# Thêm biến môi trường cho mật khẩu MySQL root
+ENV MYSQL_ROOT_PASSWORD=2302
+
 # 13. Tạo site learn.local
-RUN bench new-site learn.local --db-type mariadb --force
+RUN bench new-site learn.local --db-type mariadb --force --admin-password adminpassword --mariadb-root-password $MYSQL_ROOT_PASSWORD
 
 # 14. Cài đặt app elearning
 RUN bench --site learn.local install-app elearning
