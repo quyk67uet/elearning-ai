@@ -13,23 +13,9 @@ fi
 # Kiểm tra xem site đã tồn tại chưa
 if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-bench/sites/learn.local/site_config.json" ]; then
     echo "Creating new site learn.local..."
-    
-    # Tạo site với database connection
-    bench new-site learn.local \
-        --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
-        --db-port 23211 \
-        --db-name defaultdb \
-        --db-user avnadmin \
-        --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
-        --db-type mariadb \
-        --force
-    
-    # Cài đặt app elearning
-    echo "Installing elearning app..."
-    bench --site learn.local install-app elearning
-    
-    # Cấu hình site với thông tin đầy đủ
-    echo "Configuring site..."
+
+    # Cấu hình site trước khi tạo
+    echo "Creating site_config.json..."
     echo '{
         "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com",
         "db_port": 23211,
@@ -62,11 +48,18 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
         "gemini_api_key": "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE",
         "use_tls": 1
     }' > /app/elearning-bench/sites/learn.local/site_config.json
-    
+
+    # Tạo site với thông tin từ site_config.json
+    bench new-site learn.local --force
+
+    # Cài đặt app elearning
+    echo "Installing elearning app..."
+    bench --site learn.local install-app elearning
+
     # Import fixtures
     echo "Importing fixtures..."
     bench --site learn.local import-fixtures
-    
+
     echo "Site setup completed!"
 else
     echo "Site learn.local already exists, skipping setup..."
