@@ -2,38 +2,43 @@
 FROM python:3.10
 
 # 2. Cài đặt các phụ thuộc hệ thống cần thiết
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
     build-essential \
-    default-libmysqlclient-dev \
+    libmysqlclient-dev \
     mariadb-client \
     git \
     curl \
-    ca-certificates \
-    gnupg \
     && rm -rf /var/lib/apt/lists/*
 
-# 3. Thiết lập thư mục làm việc
+# 3. Tạo user không phải root để chạy lệnh bench
+RUN useradd -m -s /bin/bash frappe \
+    && mkdir -p /app \
+    && chown -R frappe:frappe /app
+
+# 4. Chuyển sang user frappe
+USER frappe
+
+# 5. Thiết lập thư mục làm việc
 WORKDIR /app
 
-# 4. Cài đặt Frappe Bench
-RUN pip install --upgrade pip \
-    && pip install frappe-bench
+# 6. Cài đặt Frappe Bench
+RUN pip install --user --upgrade pip \
+    && pip install --user frappe-bench
 
-# 5. Khởi tạo elearning-bench
-RUN bench init --skip-redis-config elearning-bench --frappe-branch version-15 \
+# 7. Khởi tạo elearning-bench
+RUN /home/frappe/.local/bin/bench init --skip-redis-config elearning-bench --frappe-branch version-15 \
     && cd elearning-bench
 
-# 6. Copy app elearning từ repository
+# 8. Copy app elearning từ repository
 WORKDIR /app/elearning-bench
-COPY . /app/elearning-bench/apps/elearning
+COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 
-# 7. Cài đặt app elearning và các phụ thuộc
-RUN pip install -r /app/elearning-bench/apps/elearning/requirements.txt
-RUN bench --site learn.local install-app elearning
+# 9. Cài đặt app elearning và các phụ thuộc
+RUN /home/frappe/.local/bin/pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
+RUN /home/frappe/.local/bin/bench --site learn.local install-app elearning
 
-# 8. Tạo site learn.local và cấu hình kết nối Aiven MySQL & Redis
-RUN bench new-site learn.local --db-type mysql --force && \
+# 10. Tạo site learn.local và cấu hình kết nối Aiven MySQL & Redis
+RUN /home/frappe/.local/bin/bench new-site learn.local --db-type mysql --force \
     echo '{ \
         "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com", \
         "db_port": 23211, \
@@ -68,12 +73,12 @@ RUN bench new-site learn.local --db-type mysql --force && \
     }' > /app/elearning-bench/sites/learn.local/site_config.json
 
 
-# 9. Import fixtures vào database Aiven MySQL
-RUN bench --site learn.local migrate
+# 11. Import fixtures vào database Aiven MySQL
+RUN /home/frappe/.local/bin/bench --site learn.local import-fixtures
 
-# 10. Copy entrypoint.sh vào container
-COPY entrypoint.sh /app/elearning-bench/entrypoint.sh
+# 12. Copy entrypoint.sh vào container
+COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh
 RUN chmod +x /app/elearning-bench/entrypoint.sh
 
-# 11. Sử dụng entrypoint.sh để khởi động
+# 12a. Sử dụng entrypoint.sh để khởi động
 CMD ["/app/elearning-bench/entrypoint.sh"]
