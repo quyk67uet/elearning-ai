@@ -31,7 +31,7 @@ RUN bench --site learn.local install-app elearning
 
 # 8. Tạo site learn.local và cấu hình kết nối Aiven MySQL & Redis
 RUN bench new-site learn.local --db-type mysql --force \
-    && echo '{ "db_host": "frappe-mysql-minhquyle2302-0634.aivencloud.com", "db_port": 23221, "db_name": "defaultdb", "db_user": "avnadmin", "db_password": "AVNS_J0P-RD9qxksBUkELuvY", "db_type": "mysql", "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem", "redis_cache": "redis://red-0194qdb04c73fvoe0g6379", "redis_queue": "redis://red-0194qdb04c73fvoe0g6379", "redis_socketio": "redis://red-0194qdb04c73fvoe0g6379" }' > /app/elearning-bench/sites/learn.local/site_config.json
+    && echo '{ "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com", "db_port": 23211, "db_name": "defaultdb", "db_user": "avnadmin", "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy", "db_type": "mysql", "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem", "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379", "redis_queue": "redis://red-d0194tqdbo4c73fvoe0g:6379", "redis_socketio": "redis://red-d0194tqdbo4c73fvoe0g:6379" }' > /app/elearning-bench/sites/learn.local/site_config.json
 
 # 9. Copy entrypoint.sh vào container
 COPY entrypoint.sh /app/elearning-bench/entrypoint.sh
