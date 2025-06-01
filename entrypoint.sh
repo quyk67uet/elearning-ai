@@ -4,134 +4,42 @@ set -e
 
 echo "=== Frappe Deployment Debug ==="
 
-# Tạo logs directory trước để tránh lỗi logging
-mkdir -p /app/elearning-bench/sites/learn.local/logs
+# Tạo logs directory và site structure trước
+echo "=== Creating Site Structure ==="
+mkdir -p /app/elearning-bench/sites/learn.local/{logs,private/files,public/files}
 touch /app/elearning-bench/sites/learn.local/logs/{frappe.log,database.log,error.log}
+chmod -R 755 /app/elearning-bench/sites/learn.local
+echo "✓ Site structure created"
 
-# 1. TEST DATABASE CONNECTION TRỰC TIẾP
-echo "=== Testing Database Connection ==="
-
-DB_HOST="frappe-mysql-minhquyle2302-0634.g.aivencloud.com"
-DB_PORT="23211"
-DB_NAME="defaultdb"
-DB_USER="avnadmin"
-DB_PASS="AVNS_tQP-rD9ZqxsBUkELuvy"
-
-# Test với Python MySQL connector
-echo "Testing with Python MySQL connector..."
-python3 << EOF
-import sys
-try:
-    import pymysql
-    print("✓ PyMySQL available")
-    
-    # Test connection without SSL first
-    print("Testing connection without SSL...")
-    conn = pymysql.connect(
-        host='$DB_HOST',
-        port=$DB_PORT,
-        user='$DB_USER',
-        password='$DB_PASS',
-        database='$DB_NAME',
-        connect_timeout=10
-    )
-    print("✓ Basic connection successful!")
-    
-    # Test query
-    cursor = conn.cursor()
-    cursor.execute("SELECT VERSION()")
-    version = cursor.fetchone()
-    print(f"✓ Database version: {version[0]}")
-    
-    cursor.close()
-    conn.close()
-    
-except ImportError:
-    print("✗ PyMySQL not available")
-    
-except Exception as e:
-    print(f"✗ Database connection failed: {e}")
-    print(f"Error type: {type(e).__name__}")
-    sys.exit(1)
-EOF
-
-echo "✓ Database connection test passed"
-
-# 2. SETUP CA CERTIFICATE
+# Setup CA Certificate
 echo "=== Setting up CA Certificate ==="
 if [ -n "$CA_PEM_CONTENT" ]; then
     echo "$CA_PEM_CONTENT" > /app/elearning-bench/sites/learn.local/ca.pem
+    chmod 644 /app/elearning-bench/sites/learn.local/ca.pem
     echo "✓ CA certificate created"
     
-    # Verify certificate
+    # Verify certificate format
     if openssl x509 -in /app/elearning-bench/sites/learn.local/ca.pem -text -noout > /dev/null 2>&1; then
-        echo "✓ CA certificate is valid"
+        echo "✓ CA certificate is valid X.509 format"
     else
-        echo "✗ CA certificate is invalid"
+        echo "✗ CA certificate format invalid"
+        echo "First few lines of CA cert:"
+        head -3 /app/elearning-bench/sites/learn.local/ca.pem
     fi
 else
-    echo "✗ CA_PEM_CONTENT not provided"
+    echo "✗ CA_PEM_CONTENT environment variable not set"
+    exit 1
 fi
 
-# 3. TEST DATABASE WITH SSL
-echo "=== Testing Database with SSL ==="
-python3 << EOF
-import pymysql
-import ssl
-
-try:
-    # Test SSL connection
-    print("Testing SSL connection...")
-    
-    ssl_context = ssl.create_default_context()
-    ssl_context.check_hostname = False
-    ssl_context.verify_mode = ssl.CERT_REQUIRED
-    ssl_context.load_verify_locations('/app/elearning-bench/sites/learn.local/ca.pem')
-    
-    conn = pymysql.connect(
-        host='$DB_HOST',
-        port=$DB_PORT,
-        user='$DB_USER',
-        password='$DB_PASS',
-        database='$DB_NAME',
-        ssl=ssl_context,
-        connect_timeout=10
-    )
-    
-    print("✓ SSL connection successful!")
-    conn.close()
-    
-except Exception as e:
-    print(f"✗ SSL connection failed: {e}")
-    print("Trying with ssl_disabled...")
-    
-    try:
-        conn = pymysql.connect(
-            host='$DB_HOST',
-            port=$DB_PORT,
-            user='$DB_USER',
-            password='$DB_PASS',
-            database='$DB_NAME',
-            ssl_disabled=True,
-            connect_timeout=10
-        )
-        print("✓ Non-SSL connection works")
-        conn.close()
-    except Exception as e2:
-        print(f"✗ Non-SSL also failed: {e2}")
-EOF
-
-# 4. CREATE SITE CONFIG
+# Create site config
 echo "=== Creating Site Configuration ==="
-mkdir -p /app/elearning-bench/sites/learn.local
-
-cat > /app/elearning-bench/sites/learn.local/site_config.json << EOF
+cat > /app/elearning-bench/sites/learn.local/site_config.json << 'EOF'
 {
-    "db_host": "$DB_HOST",
-    "db_port": $DB_PORT,
-    "db_name": "$DB_NAME",
-    "db_user": "$DB_USER",
-    "db_password": "$DB_PASS",
+    "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com",
+    "db_port": 23211,
+    "db_name": "defaultdb",
+    "db_user": "avnadmin",
+    "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy",
     "db_type": "mariadb",
     "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem",
     "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379",
@@ -139,42 +47,93 @@ cat > /app/elearning-bench/sites/learn.local/site_config.json << EOF
     "redis_socketio": "redis://red-d0194tqdbo4c73fvoe0g:6379",
     "allow_cors": "*",
     "developer_mode": 1,
-    "log_level": "DEBUG"
+    "log_level": "DEBUG",
+    "logging": 1
 }
 EOF
-
 echo "✓ Site config created"
 
-# 5. TEST FRAPPE DATABASE CONNECTION
-echo "=== Testing Frappe Database Connection ==="
+# Set working directory
 cd /app/elearning-bench
 
 # Set default site
+echo "=== Setting Default Site ==="
 bench use learn.local
+echo "✓ Default site set to learn.local"
 
-# Test Frappe database connection
-bench --site learn.local console << 'EOF'
+# Test database connection với bench
+echo "=== Testing Database Connection with Bench ==="
+echo "Attempting to connect to database..."
+
+# Method 1: Test với bench migrate (dry run)
+echo "Testing with bench migrate --dry-run..."
+if bench --site learn.local migrate --dry-run 2>&1; then
+    echo "✓ Database connection successful via bench"
+else
+    echo "✗ Database connection failed via bench"
+    echo "Trying alternative connection test..."
+fi
+
+# Method 2: Test với Frappe console
+echo "Testing database connection with Frappe console..."
+bench --site learn.local console << 'PYTHON_EOF'
+import frappe
+import sys
+
 try:
-    import frappe
-    frappe.init(site='learn.local')
+    print("Initializing Frappe...")
+    frappe.init(site='learn.local', sites_path='/app/elearning-bench/sites')
+    
+    print("Connecting to database...")
     frappe.connect()
     
-    print("✓ Frappe database connection successful!")
+    print("✓ Frappe initialized and connected successfully!")
     
-    # Test query
+    # Test basic query
+    print("Testing database query...")
     result = frappe.db.sql("SELECT VERSION()")
-    print(f"✓ Database version via Frappe: {result[0][0]}")
+    print(f"✓ Database version: {result[0][0]}")
     
-    frappe.destroy()
-    print("✓ Frappe database test completed")
+    # Test if tables exist
+    print("Checking if tabSingles exists...")
+    tables = frappe.db.sql("SHOW TABLES LIKE 'tabSingles'")
+    if tables:
+        print("✓ Frappe tables exist - site already initialized")
+    else:
+        print("! Frappe tables don't exist - need to run install")
+    
+    print("✓ All database tests passed!")
     
 except Exception as e:
-    print(f"✗ Frappe database connection failed: {e}")
+    print(f"✗ Database connection/test failed: {e}")
+    print(f"Error type: {type(e).__name__}")
+    
+    # Print more detailed error info
     import traceback
     traceback.print_exc()
-    exit(1)
-EOF
+    
+    # Try to get more specific error info
+    if hasattr(e, 'args') and e.args:
+        print(f"Error details: {e.args}")
+    
+    sys.exit(1)
+finally:
+    try:
+        frappe.destroy()
+        print("✓ Frappe cleanup completed")
+    except:
+        pass
+PYTHON_EOF
 
-echo "=== All Tests Passed! Starting Server ==="
+echo "=== Database Test Results ==="
+if [ $? -eq 0 ]; then
+    echo "✓ All database tests passed!"
+    echo "=== Starting Production Server ==="
+    
+    # Start production server
+    exec bench serve --port $PORT
+else
+    echo "✗ Database tests failed. Check the errors above."
+    exit 1
+fi
 
-exec bench serve --port $PORT
