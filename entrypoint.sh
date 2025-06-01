@@ -34,7 +34,7 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
         "db_name": "defaultdb",
         "db_user": "avnadmin",
         "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy",
-        "db_type": "mysql",
+        "db_type": "mariadb",
         "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem",
         "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379",
         "redis_queue": "redis://red-d0194tqdbo4c73fvoe0g:6379",
