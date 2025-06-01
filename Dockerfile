@@ -62,7 +62,7 @@ RUN bench new-site learn.local --db-type mysql --force \
         "smtp_server": "smtp.gmail.com",
         "gemini_api_key": "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE",
         "use_tls": 1
-    }' > /app/elearning-bench/sites/learn.local/site_config.json
+    }' | sed 's/^[ \t]*//;s/[ \t]*$//' > /app/elearning-bench/sites/learn.local/site_config.json
 
 # 9. Copy entrypoint.sh vào container
 COPY entrypoint.sh /app/elearning-bench/entrypoint.sh
