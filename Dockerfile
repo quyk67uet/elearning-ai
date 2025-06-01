@@ -1,13 +1,16 @@
 # 1. Chọn base image
-FROM python:3.10-slim
+FROM python:3.10
 
 # 2. Cài đặt các phụ thuộc hệ thống cần thiết
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     build-essential \
-    libmysqlclient-dev \
+    default-libmysqlclient-dev \
     mariadb-client \
     git \
     curl \
+    ca-certificates \
+    gnupg \
     && rm -rf /var/lib/apt/lists/*
 
 # 3. Thiết lập thư mục làm việc
@@ -64,7 +67,11 @@ RUN bench new-site learn.local --db-type mysql --force && \
         "use_tls": 1 \
     }' > /app/elearning-bench/sites/learn.local/site_config.json
 
-# 9. Copy entrypoint.sh vào container
+
+# 9. Import fixtures vào database Aiven MySQL
+RUN bench --site learn.local migrate
+
+# 10. Copy entrypoint.sh vào container
 COPY entrypoint.sh /app/elearning-bench/entrypoint.sh
 RUN chmod +x /app/elearning-bench/entrypoint.sh
 
