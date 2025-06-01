@@ -16,23 +16,15 @@ fi
 # Kiểm tra xem site đã tồn tại chưa
 if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-bench/sites/learn.local/site_config.json" ]; then
     echo "Creating new site learn.local..."
-    
-    # DEBUG: Printing DB connection details before bench new-site
-    echo "DEBUG: Attempting bench new-site with:"
-    echo "DEBUG:   DB_HOST=frappe-mysql-minhquyle2302-0634.g.aivencloud.com"
-    echo "DEBUG:   DB_PORT=23211"
-    echo "DEBUG:   DB_NAME=defaultdb"
-    echo "DEBUG:   DB_USER=avnadmin"
-    echo "DEBUG:   DB_PASSWORD=AVNS_tQP-rD9ZqxsBUkELuvy (Note: hardcoded password is not recommended for production)"
-    echo "DEBUG:   DB_TYPE=mariadb"
+
     
     # Tạo site với database connection
     bench new-site learn.local \
         --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
         --db-port 23211 \
         --db-name defaultdb \
-        --db-user avnadmin \
-        --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
+        --db-user defaultdb \
+        --db-password AVNS_ZbP6vmS8OvXyTRa3iGK \
         --db-type mariadb \
         --force
     
