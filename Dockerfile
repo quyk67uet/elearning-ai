@@ -39,7 +39,7 @@ RUN pip install --user --upgrade pip \
 ENV PATH="/home/frappe/.local/bin:$PATH"
 
 # 9. Khởi tạo elearning-bench (skip cron setup for container environment)
-RUN bench init --skip-redis-config-generation --skip-backup-cron elearning-bench --frappe-branch version-15
+RUN bench init --skip-redis-config-generation --no-backups elearning-bench --frappe-branch version-15
 
 # 10. Chuyển đến thư mục elearning-bench
 WORKDIR /app/elearning-bench
