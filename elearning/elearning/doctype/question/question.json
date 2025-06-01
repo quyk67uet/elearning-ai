@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2025-04-27 17:32:04.447686",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "content",
+  "question_type",
+  "cognitive_level",
+  "marks",
+  "options",
+  "explanation",
+  "hint",
+  "image_url",
+  "answer_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "content",
+   "fieldtype": "Markdown Editor",
+   "in_list_view": 1,
+   "label": "Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "question_type",
+   "fieldtype": "Select",
+   "label": "Question Type",
+   "options": "Multiple Choice\nEssay\nFill in the Blank"
+  },
+  {
+   "fieldname": "cognitive_level",
+   "fieldtype": "Select",
+   "label": "Cognitive Level",
+   "options": "NB\nTH\nVD\nVDC"
+  },
+  {
+   "fieldname": "marks",
+   "fieldtype": "Float",
+   "label": "Marks"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Table",
+   "label": "Options",
+   "options": "Question Option Item"
+  },
+  {
+   "fieldname": "explanation",
+   "fieldtype": "Markdown Editor",
+   "label": "Explanation"
+  },
+  {
+   "fieldname": "hint",
+   "fieldtype": "Markdown Editor",
+   "label": "Hint"
+  },
+  {
+   "fieldname": "image_url",
+   "fieldtype": "Text",
+   "label": "Image"
+  },
+  {
+   "fieldname": "answer_key",
+   "fieldtype": "Data",
+   "label": "Answer Key"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-15 00:51:00.977735",
+ "modified_by": "Administrator",
+ "module": "Elearning",
+ "name": "Question",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "E-learning Admin",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Educator",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Student",
+   "select": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

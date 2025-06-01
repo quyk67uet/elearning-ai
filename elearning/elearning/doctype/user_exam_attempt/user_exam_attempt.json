@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:UEA-.#####",
+ "creation": "2025-05-19 12:00:00.929895",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "user",
+  "topic",
+  "start_time",
+  "completion_timestamp",
+  "time_spent_seconds",
+  "attempt_details"
+ ],
+ "fields": [
+  {
+   "default": "UEA-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series Internal",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Topic",
+   "options": "Topics",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Completion Timestamp"
+  },
+  {
+   "fieldname": "attempt_details",
+   "fieldtype": "Table",
+   "label": "Attempt Details",
+   "options": "User Exam Attempt Detail"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "time_spent_seconds",
+   "fieldtype": "Int",
+   "label": "Time Spent Seconds"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-26 10:26:03.756964",
+ "modified_by": "Administrator",
+ "module": "Elearning",
+ "name": "User Exam Attempt",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Educator",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Student",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

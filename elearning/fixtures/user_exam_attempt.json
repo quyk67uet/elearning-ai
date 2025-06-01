@@ -1,0 +1,140 @@
+[
+ {
+  "attempt_details": [
+   {
+    "ai_feedback_what_to_include": null,
+    "ai_feedback_what_was_correct": null,
+    "ai_feedback_what_was_incorrect": null,
+    "flashcard": "FLCD-02554",
+    "parent": "UEA-00002",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "",
+    "user_self_assessment": "Chưa hiểu"
+   },
+   {
+    "ai_feedback_what_to_include": null,
+    "ai_feedback_what_was_correct": null,
+    "ai_feedback_what_was_incorrect": null,
+    "flashcard": "FLCD-02488",
+    "parent": "UEA-00002",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "",
+    "user_self_assessment": "Chưa hiểu"
+   },
+   {
+    "ai_feedback_what_to_include": null,
+    "ai_feedback_what_was_correct": null,
+    "ai_feedback_what_was_incorrect": null,
+    "flashcard": "FLCD-02493",
+    "parent": "UEA-00002",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "",
+    "user_self_assessment": "Chưa hiểu"
+   },
+   {
+    "ai_feedback_what_to_include": null,
+    "ai_feedback_what_was_correct": null,
+    "ai_feedback_what_was_incorrect": null,
+    "flashcard": "FLCD-02479",
+    "parent": "UEA-00002",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "",
+    "user_self_assessment": "Chưa hiểu"
+   },
+   {
+    "ai_feedback_what_to_include": null,
+    "ai_feedback_what_was_correct": null,
+    "ai_feedback_what_was_incorrect": null,
+    "flashcard": "FLCD-02484",
+    "parent": "UEA-00002",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "",
+    "user_self_assessment": "Chưa hiểu"
+   }
+  ],
+  "completion_timestamp": null,
+  "docstatus": 0,
+  "doctype": "User Exam Attempt",
+  "modified": "2025-06-01 02:17:38.874826",
+  "name": "UEA-00002",
+  "naming_series": "UEA-.#####",
+  "start_time": "2025-06-01 02:17:38.851447",
+  "time_spent_seconds": 0,
+  "topic": "6",
+  "user": "minhquyle2302@gmail.com"
+ },
+ {
+  "attempt_details": [
+   {
+    "ai_feedback_what_to_include": ":**  Để tính xác suất, cần phải tuân theo một quy trình logic. Đầu tiên, phải xác định được tất cả các khả năng có thể xảy ra (không gian mẫu). Tiếp theo, xác định biến cố cần tính xác suất và liệt kê các kết quả thuận lợi cho biến cố đó. Cuối cùng, áp dụng công thức \\( P(A) = \\frac{n(A)}{n(Ω)} \\) để tính xác suất. Hãy tưởng tượng như việc xây nhà, bạn phải có nền móng (không gian mẫu) trước khi xây tường (biến cố) và hoàn thiện (tính xác suất).",
+    "ai_feedback_what_was_correct": ":** Học sinh đã xác định được tất cả các bước cần thiết để tính xác suất, bao gồm xác định không gian mẫu, biến cố, kết quả thuận lợi, số kết quả thuận lợi và cuối cùng là tính xác suất. Điều này cho thấy học sinh đã nắm được các thành phần cơ bản của bài toán xác suất.\n\n2. **",
+    "ai_feedback_what_was_incorrect": ":** Thứ tự các bước của học sinh hoàn toàn sai.  Học sinh đã đảo ngược thứ tự logic của việc giải bài toán xác suất. Việc tính xác suất (bước 5) phải là bước cuối cùng sau khi đã xác định không gian mẫu (bước 1), biến cố (bước 2) và các kết quả thuận lợi (bước 3, 4).\n\n3. **",
+    "flashcard": "FLCD-02554",
+    "parent": "UEA-00003",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "5, 4, 2, 1, 3",
+    "user_self_assessment": "Khá ổn"
+   },
+   {
+    "ai_feedback_what_to_include": ":** Để lập bảng tần số ghép nhóm, cần thực hiện theo một trình tự logic.  Đầu tiên phải xác định các nhóm (bước 1), sau đó duyệt qua dữ liệu và phân loại vào các nhóm tương ứng (bước 2 và 3), tiếp theo là đếm tần số của mỗi nhóm (bước 4) và cuối cùng mới lập bảng để trình bày kết quả (bước 5). Hãy tưởng tượng như bạn đang phân loại các quả bóng vào các hộp khác nhau, bạn cần có hộp trước, sau đó mới phân loại và đếm bóng trong mỗi hộp.",
+    "ai_feedback_what_was_correct": ":** Học sinh đã nhận ra tất cả các bước cần thiết để lập bảng tần số ghép nhóm, bao gồm việc xác định nhóm, duyệt dữ liệu, phân loại dữ liệu vào nhóm, đếm tần số và trình bày bảng. Việc nhận diện đầy đủ các bước này cho thấy học sinh đã nắm được các thành phần chính của quy trình.\n\n2. **",
+    "ai_feedback_what_was_incorrect": ":** Thứ tự các bước của học sinh chưa chính xác.  Học sinh đã đặt bước \"Lập bảng\" (bước 5) lên đầu tiên, trong khi thực tế cần phải thực hiện các bước xử lý dữ liệu trước khi trình bày kết quả. Thứ tự đúng phải là xử lý dữ liệu rồi mới đến trình bày.\n\n3. **",
+    "flashcard": "FLCD-02493",
+    "parent": "UEA-00003",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "5, 1, 2, 3, 4",
+    "user_self_assessment": "Mơ hồ"
+   },
+   {
+    "ai_feedback_what_to_include": ":**  Cần vẽ hình tròn (bước 2) trước khi thực hiện các bước khác. Sau khi có hình tròn, ta mới có thể tính toán và vẽ các góc tương ứng với tỷ lệ phần trăm của từng loại trái cây (bước 1 và 3). Cuối cùng mới ghi chú thích lên biểu đồ đã hoàn thành (bước 4). Thứ tự đúng phải là 2, 1, 3, 4. Hãy tưởng tượng việc làm bánh, bạn cần có đế bánh trước khi cho nhân và trang trí.",
+    "ai_feedback_what_was_correct": ":** Học sinh đã nhận ra được bước 1 (tính toán góc) là một bước quan trọng và cần thực hiện trước khi vẽ các hình quạt (bước 3). Việc ghi chú thích (bước 4) cũng được học sinh xác định là bước cuối cùng, thể hiện sự hiểu biết về trình bày biểu đồ.\n\n2. **",
+    "ai_feedback_what_was_incorrect": ":** Học sinh đã sắp xếp sai thứ tự các bước vẽ biểu đồ.  Cụ thể, học sinh đặt bước ghi chú thích (bước 4) lên trước khi vẽ hình tròn (bước 2) và tính toán góc (bước 1).  Học sinh cũng đặt bước tính toán góc (bước 1) trước khi vẽ hình tròn (bước 2), trong khi ta cần vẽ hình tròn trước rồi mới tính toán và vẽ các góc trên hình tròn đó.\n\n3. **",
+    "flashcard": "FLCD-02479",
+    "parent": "UEA-00003",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "4, 1, 3, 2",
+    "user_self_assessment": "Mơ hồ"
+   },
+   {
+    "ai_feedback_what_to_include": ":**  Học sinh nên ôn lại quy trình tính xác suất.  Cần nhớ rằng việc xác định không gian mẫu và biến cố là bước đầu tiên, sau đó là đếm số kết quả thuận lợi và cuối cùng mới áp dụng công thức \\( P(A) = \\frac{n(A)}{n(\\Omega)} \\) để tính xác suất. Hãy tưởng tượng như xây nhà, phải có móng (không gian mẫu, biến cố) rồi mới đến tường (số kết quả thuận lợi) và cuối cùng là mái nhà (tính xác suất).",
+    "ai_feedback_what_was_correct": ":** Học sinh đã xác định được tất cả các bước cần thiết để tính xác suất, bao gồm xác định không gian mẫu, biến cố, số kết quả thuận lợi và công thức tính xác suất. Điều này cho thấy học sinh đã nắm được các thành phần cơ bản của bài toán xác suất.\n\n2. **",
+    "ai_feedback_what_was_incorrect": ":** Thứ tự các bước của học sinh chưa chính xác.  Việc tính xác suất (bước 4) phải được thực hiện sau khi đã xác định không gian mẫu (bước 1), biến cố (bước 2) và số phần tử thuận lợi (bước 3). Học sinh đã đặt bước 4 lên đầu, dẫn đến việc chưa có đủ thông tin để tính toán.\n\n3. **",
+    "flashcard": "FLCD-02484",
+    "parent": "UEA-00003",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "4, 2, 1, 3",
+    "user_self_assessment": "Chưa hiểu"
+   },
+   {
+    "ai_feedback_what_to_include": ":**  Hãy nhớ rằng việc tìm mốt bắt đầu từ việc quan sát dữ liệu.  Em cần xem xét bảng tần số trước (bước 1), sau đó mới tìm tần số lớn nhất (bước 2).  Hãy tưởng tượng em đang tìm món đồ chơi phổ biến nhất trong một cửa hàng.  Em sẽ phải xem xét tất cả các món đồ chơi trước (bảng tần số), rồi mới đếm xem món nào xuất hiện nhiều nhất (tần số lớn nhất).",
+    "ai_feedback_what_was_correct": ":** Học sinh đã sử dụng tất cả các bước cần thiết để tìm mốt của mẫu số liệu từ bảng tần số (1, 2, 3, 4). Điều này cho thấy học sinh đã nắm được các thành phần liên quan đến việc xác định mốt.\n\n2. **",
+    "ai_feedback_what_was_incorrect": ":** Thứ tự các bước của học sinh chưa chính xác. Học sinh đã sắp xếp theo thứ tự 3, 2, 1, 4, trong khi thứ tự đúng là 1, 2, 3, 4. Việc xác định tần số lớn nhất (bước 2) phải dựa trên việc quan sát cột tần số (bước 1).  Sau đó mới xác định giá trị tương ứng (bước 3) và kết luận giá trị đó là mốt (bước 4).\n\n3. **",
+    "flashcard": "FLCD-02488",
+    "parent": "UEA-00003",
+    "parentfield": "attempt_details",
+    "parenttype": "User Exam Attempt",
+    "user_answer": "3, 2, 1, 4",
+    "user_self_assessment": "Mơ hồ"
+   }
+  ],
+  "completion_timestamp": "2025-06-01 02:19:38.375592",
+  "docstatus": 0,
+  "doctype": "User Exam Attempt",
+  "modified": "2025-06-01 02:19:38.377365",
+  "name": "UEA-00003",
+  "naming_series": "UEA-.#####",
+  "start_time": "2025-06-01 02:17:38.891888",
+  "time_spent_seconds": 119,
+  "topic": "6",
+  "user": "minhquyle2302@gmail.com"
+ }
+]

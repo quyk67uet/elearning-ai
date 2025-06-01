@@ -1,0 +1,1 @@
+from elearning.overrides.user.custom_user import CustomUser, after_insert 

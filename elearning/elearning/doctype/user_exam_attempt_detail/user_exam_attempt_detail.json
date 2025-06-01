@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-19 12:05:33.652943",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "flashcard",
+  "user_answer",
+  "ai_feedback_what_was_correct",
+  "ai_feedback_what_was_incorrect",
+  "ai_feedback_what_to_include",
+  "user_self_assessment"
+ ],
+ "fields": [
+  {
+   "fieldname": "flashcard",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Flashcard",
+   "options": "Flashcard",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user_answer",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "User Answer"
+  },
+  {
+   "fieldname": "ai_feedback_what_was_correct",
+   "fieldtype": "Text",
+   "label": "AI Feedback: Correct"
+  },
+  {
+   "fieldname": "ai_feedback_what_was_incorrect",
+   "fieldtype": "Text",
+   "label": "AI Feedback: Incorrect"
+  },
+  {
+   "fieldname": "ai_feedback_what_to_include",
+   "fieldtype": "Text",
+   "label": "AI Feedback: To Include"
+  },
+  {
+   "fieldname": "user_self_assessment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "User Self Assessment",
+   "options": "Ch\u01b0a hi\u1ec3u\nM\u01a1 h\u1ed3\nKh\u00e1 \u1ed5n\nR\u1ea5t r\u00f5"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-25 23:51:32.649633",
+ "modified_by": "Administrator",
+ "module": "Elearning",
+ "name": "User Exam Attempt Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

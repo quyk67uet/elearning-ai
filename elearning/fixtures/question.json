@@ -1,0 +1,4402 @@
+[
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Hệ phương trình nào sau đây vô nghiệm?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.003876",
+  "name": "e4186ebb5d",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\[ \\begin{cases} \\frac{2}{x} + y = -1 \\\\ \\frac{1}{x} + y = -2 \\end{cases} \\]",
+    "parent": "e4186ebb5d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\[ \\begin{cases} \\frac{3}{x} + y = -2 \\\\ \\frac{2}{x} - y = 1 \\end{cases} \\]",
+    "parent": "e4186ebb5d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\[ \\begin{cases} \\frac{2}{x} - y = 1 \\\\ \\frac{4}{x} + y = 2 \\end{cases} \\]",
+    "parent": "e4186ebb5d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\[ \\begin{cases} \\frac{4}{x} + y = -6 \\\\ \\frac{2}{x} - y = 1 \\end{cases} \\]",
+    "parent": "e4186ebb5d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Phương trình \\(x^2 - 4x + m = 0\\) có nghiệm kép, khi đó giá trị của \\(m\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.029495",
+  "name": "818435a660",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\(m = 4\\).",
+    "parent": "818435a660",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(m = 16\\).",
+    "parent": "818435a660",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(m = -16\\).",
+    "parent": "818435a660",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(m = -4\\).",
+    "parent": "818435a660",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Cho đường tròn \\((A; 2\\,cm)\\) và đường tròn \\((B; 3\\,cm)\\). Biết \\(AB = 5\\,cm\\), số tiếp tuyến chung ngoài của hai đường tròn là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.090045",
+  "name": "ac2c87edbd",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "3.",
+    "parent": "ac2c87edbd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "2.",
+    "parent": "ac2c87edbd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "1.",
+    "parent": "ac2c87edbd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "4.",
+    "parent": "ac2c87edbd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Cho đường tròn \\((O)\\) đường kính \\(AB\\). Lấy điểm \\(C\\) thuộc \\((O)\\) sao cho \\(sd\\overset{\\frown}{BC} = 100^\\circ\\). Số đo góc \\(\\widehat{BAC}\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.121788",
+  "name": "d97783048a",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(80^\\circ\\).",
+    "parent": "d97783048a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(40^\\circ\\).",
+    "parent": "d97783048a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(100^\\circ\\).",
+    "parent": "d97783048a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(50^\\circ\\).",
+    "parent": "d97783048a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Hai điểm \\(A, B\\) thuộc đường tròn \\((O)\\) và \\(\\widehat{AOB} = 60^\\circ\\). Số đo cung nhỏ \\(AB\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.177728",
+  "name": "5c05d00be3",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(90^\\circ\\).",
+    "parent": "5c05d00be3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(30^\\circ\\).",
+    "parent": "5c05d00be3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(60^\\circ\\).",
+    "parent": "5c05d00be3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(120^\\circ\\).",
+    "parent": "5c05d00be3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Bộ số đo nào dưới đây có thể là góc của tứ giác nội tiếp?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.213643",
+  "name": "c9c94ff900",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\(75^\\circ; 85^\\circ; 105^\\circ; 95^\\circ\\).",
+    "parent": "c9c94ff900",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(68^\\circ; 92^\\circ; 112^\\circ; 98^\\circ\\).",
+    "parent": "c9c94ff900",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(60^\\circ; 105^\\circ; 120^\\circ; 85^\\circ\\).",
+    "parent": "c9c94ff900",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(80^\\circ; 90^\\circ; 110^\\circ; 90^\\circ\\).",
+    "parent": "c9c94ff900",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Kết quả rút gọn biểu thức \\((\\sqrt{5} - 1)^2\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.247982",
+  "name": "c96cd1eeb1",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\(1 - \\sqrt{5}\\).",
+    "parent": "c96cd1eeb1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(1 - 2\\sqrt{5}\\).",
+    "parent": "c96cd1eeb1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(1\\).",
+    "parent": "c96cd1eeb1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(2\\sqrt{5} - 1\\).",
+    "parent": "c96cd1eeb1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Diện tích xung quanh hình trụ có bán kính đáy \\(r\\) và chiều cao \\(h\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.298629",
+  "name": "ac085c8818",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(2\\pi rh + 2\\pi r^2\\).",
+    "parent": "ac085c8818",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(\\pi rh + 2\\pi r^2\\).",
+    "parent": "ac085c8818",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(2\\pi rh\\).",
+    "parent": "ac085c8818",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(\\pi rh\\).",
+    "parent": "ac085c8818",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Nghiệm tổng quát của phương trình \\( 3x - y = 6 \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.368199",
+  "name": "a4ddf69ac3",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\begin{cases} x \\in \\mathbb{R} \\\\ y = 3x + 6 \\end{cases} \\).",
+    "parent": "a4ddf69ac3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\begin{cases} x \\in \\mathbb{R} \\\\ y = -3x - 2 \\end{cases} \\).",
+    "parent": "a4ddf69ac3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( \\begin{cases} x \\in \\mathbb{R} \\\\ y = 3x - 6 \\end{cases} \\).",
+    "parent": "a4ddf69ac3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\begin{cases} x \\in \\mathbb{R} \\\\ y = 6 - 3x \\end{cases} \\).",
+    "parent": "a4ddf69ac3",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Căn bậc hai số học của \\( (-\\sqrt{5})^2 \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.399468",
+  "name": "3aff4821cd",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(-5\\).",
+    "parent": "3aff4821cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(5\\).",
+    "parent": "3aff4821cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(\\sqrt{5}\\).",
+    "parent": "3aff4821cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(-\\sqrt{5}\\).",
+    "parent": "3aff4821cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Cho tam giác \\( ABC \\) nhọn, đường cao \\( AH \\) (\\( H \\in BC \\)). Khi đó \\( \\cos C \\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.459881",
+  "name": "7dd334f2a1",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{CH}{AH} \\).",
+    "parent": "7dd334f2a1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{AB}{BC} \\).",
+    "parent": "7dd334f2a1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{AC}{BC} \\).",
+    "parent": "7dd334f2a1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( \\frac{HC}{AC} \\).",
+    "parent": "7dd334f2a1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Cho hai đường tròn \\( (O; 4cm) \\) và \\( (O'; 3cm) \\). Biết \\( OO' = 5cm \\). Vị trí tương đối của hai đường tròn là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.493566",
+  "name": "6b2c22fc20",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "Không cắt nhau.",
+    "parent": "6b2c22fc20",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Tiếp xúc ngoài.",
+    "parent": "6b2c22fc20",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Tiếp xúc trong.",
+    "parent": "6b2c22fc20",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "Cắt nhau.",
+    "parent": "6b2c22fc20",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Có bao nhiêu đường tròn đi qua 2 điểm phân biệt cho trước?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.587789",
+  "name": "3a40806940",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "2.",
+    "parent": "3a40806940",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "1.",
+    "parent": "3a40806940",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "3.",
+    "parent": "3a40806940",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "Vô số.",
+    "parent": "3a40806940",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Điều kiện xác định của biểu thức \\( \\sqrt{x - 2023} \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.629197",
+  "name": "2171322985",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( x \\geq 2023 \\).",
+    "parent": "2171322985",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( x \\leq 2023 \\).",
+    "parent": "2171322985",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( x > 2023 \\).",
+    "parent": "2171322985",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( x < 2023 \\).",
+    "parent": "2171322985",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Cho hàm số \\( y = -2023x^2 \\), khẳng định đúng là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.695824",
+  "name": "4e0d22cd63",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "Đồ thị không đi qua gốc tọa độ.",
+    "parent": "4e0d22cd63",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Hàm số đồng biến khi \\( x > 0 \\).",
+    "parent": "4e0d22cd63",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "Hàm số nghịch biến khi \\( x > 0 \\).",
+    "parent": "4e0d22cd63",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Hàm số nghịch biến trên \\( \\mathbb{R} \\).",
+    "parent": "4e0d22cd63",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Hàm số nào đồng biến trên \\( \\mathbb{R} \\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.739030",
+  "name": "d0fa965438",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = -2x \\).",
+    "parent": "d0fa965438",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = 2 - 3x \\).",
+    "parent": "d0fa965438",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( y = 3x - 2 \\).",
+    "parent": "d0fa965438",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = -2x + 3 \\).",
+    "parent": "d0fa965438",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Cho \\( (O; R) \\) có dây \\( AB = 24cm \\), khoảng cách từ \\( O \\) đến \\( AB \\) là \\( 5cm \\). Bán kính \\( R \\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.760045",
+  "name": "37c2028a11",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( 13cm \\).",
+    "parent": "37c2028a11",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 15cm \\).",
+    "parent": "37c2028a11",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 16cm \\).",
+    "parent": "37c2028a11",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 12cm \\).",
+    "parent": "37c2028a11",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Quỹ tích điểm \\( M \\) nhìn đoạn \\( AB = 12cm \\) dưới góc vuông là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.799398",
+  "name": "56056ead78",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "Đường tròn tâm \\( I \\) (trung điểm \\( AB \\)) bán kính \\( 6cm \\).",
+    "parent": "56056ead78",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Nửa đường tròn đường kính \\( AB \\).",
+    "parent": "56056ead78",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Đường tròn tâm \\( M \\) bán kính \\( 6cm \\).",
+    "parent": "56056ead78",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "Đường tròn tâm \\( I \\) bán kính \\( 12cm \\).",
+    "parent": "56056ead78",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Giao điểm của hai đường thẳng \\( (d_1): y = 3x - 2 \\) và \\( (d_2): y = 2 - x \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.831928",
+  "name": "3ccc1e9456",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( A(2; 0) \\).",
+    "parent": "3ccc1e9456",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( A\\left(\\frac{2}{3}; 0\\right) \\).",
+    "parent": "3ccc1e9456",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( A(1; -1) \\).",
+    "parent": "3ccc1e9456",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( A(1; 1) \\).",
+    "parent": "3ccc1e9456",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Tam giác \\( ABC \\) vuông tại \\( A \\), đường cao \\( AH \\). Biết \\( AH = 6cm \\), \\( CH = 9cm \\). Độ dài \\( AB \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.850759",
+  "name": "c0e0b28955",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\sqrt{13} \\).",
+    "parent": "c0e0b28955",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 3\\sqrt{13} \\).",
+    "parent": "c0e0b28955",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 2\\sqrt{13} \\).",
+    "parent": "c0e0b28955",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 13 \\).",
+    "parent": "c0e0b28955",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Độ dài cung \\( 60^\\circ \\) của đường tròn \\( (O; 2cm) \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.885528",
+  "name": "0a5c335efa",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{\\pi}{2} cm \\).",
+    "parent": "0a5c335efa",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{3\\pi}{2} cm \\).",
+    "parent": "0a5c335efa",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( \\frac{2\\pi}{3} cm \\).",
+    "parent": "0a5c335efa",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{\\pi}{3} cm \\).",
+    "parent": "0a5c335efa",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Giá trị của biểu thức \\( \\sqrt{x^2 + 3} \\) tại \\( x = -1 \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.920436",
+  "name": "1598b5f9c7",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 4 \\).",
+    "parent": "1598b5f9c7",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 2 \\).",
+    "parent": "1598b5f9c7",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\pm 2 \\).",
+    "parent": "1598b5f9c7",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\sqrt{2} \\).",
+    "parent": "1598b5f9c7",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Từ điểm \\( C \\) nằm ngoài \\( (O; 3cm) \\), kẻ tiếp tuyến \\( CA, CB \\). Tiếp tuyến tại \\( M \\) thuộc cung nhỏ \\( AB \\) cắt \\( CA, CB \\) lần lượt tại \\( D, E \\). Biết \\( OC = 5cm \\). Chu vi tam giác \\( CDE \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.955033",
+  "name": "f449472f1a",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 12cm \\).",
+    "parent": "f449472f1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 6cm \\).",
+    "parent": "f449472f1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 10cm \\).",
+    "parent": "f449472f1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 8cm \\).",
+    "parent": "f449472f1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Phương trình \\( x^2 + 3x - 4 = 0 \\) có hai nghiệm \\( x_1, x_2 \\). Giá trị của \\( x_1^2 x_2 + x_1 x_2^2 \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.984990",
+  "name": "8cc571041d",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(-16\\).",
+    "parent": "8cc571041d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(-12\\).",
+    "parent": "8cc571041d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(12\\).",
+    "parent": "8cc571041d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(16\\).",
+    "parent": "8cc571041d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Với \\( a &lt; b \\), biểu thức \\( \\frac{1}{a - b}\\sqrt{5 - b^2} \\) rút gọn bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.015395",
+  "name": "cf93e89747",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 5 \\).",
+    "parent": "cf93e89747",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( -5 \\).",
+    "parent": "cf93e89747",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\sqrt{5} \\).",
+    "parent": "cf93e89747",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( -\\sqrt{5} \\).",
+    "parent": "cf93e89747",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Phương trình \\( x^2 - 2mx - 2m - 2 = 0 \\) có hai nghiệm trái dấu khi",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.050226",
+  "name": "7b3d946e01",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( m < -1 \\).",
+    "parent": "7b3d946e01",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( m > 1 \\).",
+    "parent": "7b3d946e01",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( m < 1 \\).",
+    "parent": "7b3d946e01",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( m > -1 \\).",
+    "parent": "7b3d946e01",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Hệ phương trình \\( \\begin{cases} m^2 x - 2y = 7 \\\\ 2x - y = -1 \\end{cases} \\) có nghiệm duy nhất khi",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.080633",
+  "name": "6194aceee1",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( m \\neq 2 \\).",
+    "parent": "6194aceee1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( m \\neq -2 \\).",
+    "parent": "6194aceee1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( m = \\pm 2 \\).",
+    "parent": "6194aceee1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( m \\neq \\pm 2 \\).",
+    "parent": "6194aceee1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Hai dây \\( AB = 12cm \\), \\( CD = 16cm \\) song song và khác phía so với tâm \\( O \\) của \\( (O; 10cm) \\). Khoảng cách giữa \\( AB \\) và \\( CD \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.108653",
+  "name": "7af42a8199",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 2cm \\).",
+    "parent": "7af42a8199",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 14cm \\).",
+    "parent": "7af42a8199",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 8cm \\).",
+    "parent": "7af42a8199",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 6cm \\).",
+    "parent": "7af42a8199",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Hệ phương trình \\( \\begin{cases} ax + 3y = 4 \\\\ x + by = -2 \\end{cases} \\) có nghiệm \\( (-1; 2) \\) khi",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.157519",
+  "name": "de63507112",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( a = 2; b = 0 \\).",
+    "parent": "de63507112",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( a = -2; b = -\\frac{1}{2} \\).",
+    "parent": "de63507112",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( a = 2; b = -\\frac{1}{2} \\).",
+    "parent": "de63507112",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( a = 2; b = \\frac{1}{2} \\).",
+    "parent": "de63507112",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Đường thẳng đi qua \\( A(0; 2) \\) và song song với \\( y = 2x \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.194687",
+  "name": "9703902b99",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( y = 2x + 2 \\).",
+    "parent": "9703902b99",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = -2x + 2 \\).",
+    "parent": "9703902b99",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = 2x + 1 \\).",
+    "parent": "9703902b99",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = x + 2 \\).",
+    "parent": "9703902b99",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Cho \\( \\cot \\alpha = 3 \\). Giá trị \\( \\tan \\alpha \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.215748",
+  "name": "822e9f5f39",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{1}{3} \\).",
+    "parent": "822e9f5f39",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 3 \\).",
+    "parent": "822e9f5f39",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( -\\frac{1}{3} \\).",
+    "parent": "822e9f5f39",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( -3 \\).",
+    "parent": "822e9f5f39",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Bóng của một ngọn hải đăng dài \\( 65m \\) với góc tạo bởi tia nắng và mặt đất là \\( 69^\\circ \\). Chiều cao ngọn hải đăng là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.245790",
+  "name": "1b5b77408f",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 170m \\).",
+    "parent": "1b5b77408f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 61m \\).",
+    "parent": "1b5b77408f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 24m \\).",
+    "parent": "1b5b77408f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 169m \\).",
+    "parent": "1b5b77408f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Đồ thị \\( y = ax^2 \\) cắt đường thẳng \\( y = -2x + 3 \\) tại điểm có hoành độ \\( 3 \\). Giá trị \\( a \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.276849",
+  "name": "9133221af0",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(-3\\).",
+    "parent": "9133221af0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( -\\frac{1}{3} \\).",
+    "parent": "9133221af0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 3 \\).",
+    "parent": "9133221af0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{1}{3} \\).",
+    "parent": "9133221af0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Tổng các giá trị nguyên của \\( x \\) để \\( A = \\frac{-6}{\\sqrt{x - 2}} \\) (\\( x \\geq 0; x \\neq 4 \\)) nguyên âm là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.313833",
+  "name": "790c739954",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( 114 \\).",
+    "parent": "790c739954",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 121 \\).",
+    "parent": "790c739954",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 160 \\).",
+    "parent": "790c739954",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 150 \\).",
+    "parent": "790c739954",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Tam giác đều \\( ABC \\) cạnh \\( 3cm \\) ngoại tiếp đường tròn \\( I \\). Diện tích miền gạch sọc là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.342834",
+  "name": "2319182cbc",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( \\frac{3\\sqrt{3} - \\pi}{4} \\).",
+    "parent": "2319182cbc",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{9\\sqrt{3} - 3\\pi}{4} \\).",
+    "parent": "2319182cbc",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{2\\sqrt{3} - \\pi}{4} \\).",
+    "parent": "2319182cbc",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{3\\sqrt{3} - \\pi}{8} \\).",
+    "parent": "2319182cbc",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Rút gọn \\( 23\\sqrt{x - y} \\sqrt{36x^5} - 2x^2 \\sqrt{49xy^2} + \\sqrt{16x} \\) (\\( x \\geq 0, y &lt; 0 \\)) được",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.368608",
+  "name": "644bbd2876",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 39\\sqrt{x} - 50x^2 y \\sqrt{x} \\).",
+    "parent": "644bbd2876",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 27\\sqrt{x} + 8x^2 y \\sqrt{x} \\).",
+    "parent": "644bbd2876",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 27\\sqrt{x} - 20x^2 y \\sqrt{x} \\).",
+    "parent": "644bbd2876",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 39\\sqrt{x} + 62x^2 y \\sqrt{x} \\).",
+    "parent": "644bbd2876",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Hai đường tròn \\( (O; 20cm) \\) và \\( (O'; 15cm) \\) cắt nhau tại \\( A, B \\) (\\( AB = 24cm \\)), \\( O \\) và \\( O' \\) khác phía so với \\( AB \\). Độ dài \\( OO' \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.404615",
+  "name": "417453bc19",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( 25cm \\).",
+    "parent": "417453bc19",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 9cm \\).",
+    "parent": "417453bc19",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 7cm \\).",
+    "parent": "417453bc19",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 8cm \\).",
+    "parent": "417453bc19",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Từ điểm \\( M \\) ngoài \\( (O; R) \\), kẻ tiếp tuyến \\( MT \\) và cát tuyến \\( MAB \\) qua \\( O \\). Biết \\( MT = 20cm \\), \\( MB = 50cm \\). Bán kính \\( R \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.433101",
+  "name": "b736165581",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 22cm \\).",
+    "parent": "b736165581",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 21cm \\).",
+    "parent": "b736165581",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 20cm \\).",
+    "parent": "b736165581",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 25cm \\).",
+    "parent": "b736165581",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Ba đường thẳng \\( (d_1): y = 2x + 3 \\), \\( (d_2): y = x + 5 \\), \\( (d_3): y = (m - 1)x + 3 \\) đồng quy khi \\( m \\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.478976",
+  "name": "be7302ced5",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 5 \\).",
+    "parent": "be7302ced5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 3 \\).",
+    "parent": "be7302ced5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 2 \\).",
+    "parent": "be7302ced5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 4 \\).",
+    "parent": "be7302ced5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Tiếp tuyến song song với dây \\( AB = 1.6R \\) của \\( (O; R) \\) cắt \\( OA, OB \\) tại \\( M, N \\). Diện tích tam giác \\( OMN \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.505028",
+  "name": "c97756dbbf",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{5}{3} R^2 \\).",
+    "parent": "c97756dbbf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( R^2 \\).",
+    "parent": "c97756dbbf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\frac{3}{2} R^2 \\).",
+    "parent": "c97756dbbf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( \\frac{4}{3} R^2 \\).",
+    "parent": "c97756dbbf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VD&gt; Mảnh vườn hình chữ nhật có chu vi \\( 40m \\). Nếu giảm chiều dài \\( 2m \\), tăng chiều rộng \\( 3m \\) thì diện tích tăng \\( 24m^2 \\). Hệ phương trình biểu thị mối quan hệ giữa chiều dài \\( x \\) và chiều rộng \\( y \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.535246",
+  "name": "287f974213",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\begin{cases} x + y = 20 \\\\ xy - (x - 2)(y + 3) = 24 \\end{cases} \\).",
+    "parent": "287f974213",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\begin{cases} x + y = 20 \\\\ (x - 2)(y + 3) - xy = 24 \\end{cases} \\).",
+    "parent": "287f974213",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( \\begin{cases} 2x + 2y = 40 \\\\ (x - 2)(y + 3) = xy + 24 \\end{cases} \\).",
+    "parent": "287f974213",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( \\begin{cases} x + y = 20 \\\\ (x + 2)(y + 3) = xy - 24 \\end{cases} \\).",
+    "parent": "287f974213",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VDC&gt; Lon sơn hình trụ dung tích \\( 5 \\) lít cần bán kính đáy \\( R \\) để diện tích toàn phần nhỏ nhất là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.565823",
+  "name": "6a43654d8c",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( R = \\sqrt[3]{\\frac{5}{2\\pi}} dm \\).",
+    "parent": "6a43654d8c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( R = \\sqrt[3]{5} dm \\).",
+    "parent": "6a43654d8c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( R = \\sqrt{\\frac{5}{2\\pi}} dm \\).",
+    "parent": "6a43654d8c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( R = \\frac{5}{2\\pi} dm \\).",
+    "parent": "6a43654d8c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VDC&gt; Số nghiệm của phương trình \\( \\sqrt{x + 3} + \\sqrt{5 - x} = x^2 - 2x - 7 \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.599290",
+  "name": "6f347fff89",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( 1 \\).",
+    "parent": "6f347fff89",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 0 \\).",
+    "parent": "6f347fff89",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 3 \\).",
+    "parent": "6f347fff89",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 2 \\).",
+    "parent": "6f347fff89",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VDC&gt; Số giá trị tự nhiên \\( m \\) để hệ \\( \\begin{cases} 4x + my = -m + 10 \\\\ mx + y = 4 \\end{cases} \\) có nghiệm \\( (x; y) \\) thỏa \\( x &gt; 0, y &gt; 0 \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.648721",
+  "name": "ee25076fc6",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( 7 \\).",
+    "parent": "ee25076fc6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 8 \\).",
+    "parent": "ee25076fc6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 10 \\).",
+    "parent": "ee25076fc6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 9 \\).",
+    "parent": "ee25076fc6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VDC&gt; Biểu thức \\( B = \\frac{3x_1^2 + 3x_2^2 + 4x_1 + 4x_2 - 5}{x_1^2 + x_2^2 - 4} \\) (với \\( x_1, x_2 \\) là nghiệm của \\( x^2 - (m + 1)x - 3 = 0 \\)) đạt giá trị nhỏ nhất \\( a \\) tại \\( m = b \\). Khẳng định đúng là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.682563",
+  "name": "fa9cd55094",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( a = 3b \\).",
+    "parent": "fa9cd55094",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( a^2 + b^2 = 1 \\).",
+    "parent": "fa9cd55094",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( a - b = 2023 \\).",
+    "parent": "fa9cd55094",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( a + 2b = 6 \\).",
+    "parent": "fa9cd55094",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VDC&gt; Tam giác \\( ABC \\) vuông tại \\( A \\) (\\( AB = 6cm, AC = 8cm \\)). Tổng diện tích hai hình lưỡi liềm tạo bởi nửa đường tròn đường kính \\( BC \\) và hai nửa đường tròn đường kính \\( AB, AC \\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.706326",
+  "name": "bf3b6df2b4",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 28cm^2 \\).",
+    "parent": "bf3b6df2b4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 24cm^2 \\).",
+    "parent": "bf3b6df2b4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 36cm^2 \\).",
+    "parent": "bf3b6df2b4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 48cm^2 \\).",
+    "parent": "bf3b6df2b4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;VDC&gt; Cho tam giác \\(ABC\\) vuông tại \\(A\\) có \\(AB = 6cm\\), \\(AC = 8cm\\). Vẽ nửa đường tròn đường kính \\(BC\\) đi qua \\(A\\). Ở miền ngoài tam giác \\(ABC\\), vẽ hai nửa đường tròn có đường kính lần lượt là \\(AB\\) và \\(AC\\). Tổng diện tích hai hình lưỡi liềm (phần tô đậm) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:50.758653",
+  "name": "8c32b40c79",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(28cm^2\\).",
+    "parent": "8c32b40c79",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(24cm^2\\).",
+    "parent": "8c32b40c79",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(36cm^2\\).",
+    "parent": "8c32b40c79",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(48cm^2\\).",
+    "parent": "8c32b40c79",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Cho tam giác \\(ABC\\) vuông tại \\(A\\), đường cao \\(AH\\) (\\(H \\in BC\\)). Hệ thức nào đúng?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.053920",
+  "name": "c73cad0f7c",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\(AC^2 = BC \\cdot BH\\).",
+    "parent": "c73cad0f7c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(AB^2 = AH \\cdot BC\\).",
+    "parent": "c73cad0f7c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\(AH^2 = AB \\cdot AC\\).",
+    "parent": "c73cad0f7c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\(AH \\cdot BC = AB \\cdot AC\\).",
+    "parent": "c73cad0f7c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "&lt;NB&gt; Phương trình nào sau đây là phương trình bậc hai ẩn \\( x \\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.329539",
+  "name": "67427427f5",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": "\\( 2x^2 - 3\\sqrt{x} + 1 = 0 \\).",
+    "parent": "67427427f5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 3x - y^2 + 2 = 0 \\).",
+    "parent": "67427427f5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": "\\( 2x^2 + 4x - 1 = 0 \\).",
+    "parent": "67427427f5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( 2x^2 - 4x^3 + 1 = 0 \\).",
+    "parent": "67427427f5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": " Điểm \\( A(-1; 2) \\) thuộc đồ thị hàm số nào sau đây?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:56:49.666396",
+  "name": "f3edc1802c",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": "\\( y = x + 3 \\).",
+    "parent": "f3edc1802c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = 3x - 7 \\).",
+    "parent": "f3edc1802c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = -x + 3 \\).",
+    "parent": "f3edc1802c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": "\\( y = 3x + 1 \\).",
+    "parent": "f3edc1802c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Phương trình \\(x^2 - 4x + m = 0\\) có nghiệm kép, khi đó giá trị của \\(m\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:49.872602",
+  "name": "bccd322735",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "bccd322735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "bccd322735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "bccd322735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "bccd322735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Trong các hình vẽ sau, hình nào thể hiện góc có đỉnh bên ngoài đường tròn?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:49.907493",
+  "name": "bb6d1f2e1f",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "bb6d1f2e1f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "bb6d1f2e1f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "bb6d1f2e1f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "bb6d1f2e1f",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho tam giác \\(ABC\\) vuông tại \\(A\\), đường cao \\(AH\\) (\\(H \\in BC\\)). Hệ thức nào đúng?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:49.941597",
+  "name": "adcce90f50",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "adcce90f50",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "adcce90f50",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "adcce90f50",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "adcce90f50",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho đường tròn \\((A; 2\\,cm)\\) và đường tròn \\((B; 3\\,cm)\\). Biết \\(AB = 5\\,cm\\), số tiếp tuyến chung ngoài của hai đường tròn là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:49.981265",
+  "name": "92674f8acb",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "92674f8acb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "92674f8acb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "92674f8acb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "92674f8acb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho đường tròn \\((O)\\) đường kính \\(AB\\). Lấy một điểm \\(C\\) thuộc đường tròn \\((O)\\) sao cho \\(\\text{sđ} \\overset{\\frown}{BC} = 100^\\circ\\), khi đó số đo góc \\(\\widehat{BAC}\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.016986",
+  "name": "b2914259bf",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b2914259bf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b2914259bf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b2914259bf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "b2914259bf",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Hai điểm \\(A, B\\) thuộc đường tròn \\((O)\\) và \\(\\widehat{AOB} = 60^\\circ\\). Số đo cung nhỏ \\(AB\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.086365",
+  "name": "a1fd7bfae0",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "a1fd7bfae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "a1fd7bfae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "a1fd7bfae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "a1fd7bfae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Bộ số đo bốn góc nào dưới đây có thể là số đo các góc của một tứ giác nội tiếp?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.113110",
+  "name": "d67b6099b8",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "d67b6099b8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d67b6099b8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d67b6099b8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d67b6099b8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Kết quả rút gọn của biểu thức \\((\\sqrt{5} - 1)^2\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.149109",
+  "name": "ec29302833",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "ec29302833",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ec29302833",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ec29302833",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ec29302833",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Diện tích xung quanh của hình trụ có bán kính đáy \\(r\\) và chiều cao \\(h\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.185218",
+  "name": "9d964ccbf6",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "9d964ccbf6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "9d964ccbf6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "9d964ccbf6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "9d964ccbf6",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Phương trình nào sau đây là phương trình bậc hai ẩn \\(x\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.217678",
+  "name": "ae5518e4c5",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ae5518e4c5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ae5518e4c5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "ae5518e4c5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ae5518e4c5",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Nghiệm tổng quát của phương trình \\(3x - y = 6\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.270490",
+  "name": "7de386f2cd",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7de386f2cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7de386f2cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "7de386f2cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7de386f2cd",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Căn bậc hai số học của \\((-\\sqrt{5})^2\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.331066",
+  "name": "b68ab21f32",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b68ab21f32",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b68ab21f32",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "b68ab21f32",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b68ab21f32",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho tam giác \\(ABC\\) nhọn. Kẻ đường cao \\(AH\\) (\\(H \\in BC\\)), khi đó \\(\\cos C\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.410494",
+  "name": "85ce936fcb",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "85ce936fcb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "85ce936fcb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "85ce936fcb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "85ce936fcb",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho hai đường tròn \\((O; 4\\,cm)\\) và \\((O'; 3\\,cm)\\). Biết \\(OO' = 5\\,cm\\). Vị trí tương đối của hai đường tròn là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.456935",
+  "name": "f0c6b38d1d",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f0c6b38d1d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f0c6b38d1d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f0c6b38d1d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "f0c6b38d1d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Có bao nhiêu đường tròn đi qua 2 điểm phân biệt cho trước?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.491819",
+  "name": "2aa1b77f0d",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "2aa1b77f0d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "2aa1b77f0d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "2aa1b77f0d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "2aa1b77f0d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Tìm điều kiện xác định của biểu thức \\(\\sqrt{x - 2023}\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.525695",
+  "name": "d62c2e1d94",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "d62c2e1d94",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d62c2e1d94",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d62c2e1d94",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d62c2e1d94",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Điểm \\(A(-1; 2)\\) thuộc đồ thị hàm số nào dưới đây?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.570163",
+  "name": "d9516dc86d",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "d9516dc86d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d9516dc86d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d9516dc86d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d9516dc86d",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho hàm số \\(y = -2023x^2\\), khẳng định nào sau đây là đúng?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.600153",
+  "name": "f5da6619da",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f5da6619da",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f5da6619da",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "f5da6619da",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f5da6619da",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Hàm số nào sau đây đồng biến trên \\(\\mathbb{R}\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.633234",
+  "name": "461ac48b73",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "461ac48b73",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "461ac48b73",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "461ac48b73",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "461ac48b73",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho \\((O; R)\\) có dây \\(AB = 24\\,cm\\), biết khoảng cách từ tâm \\(O\\) đến dây \\(AB\\) bằng \\(5\\,cm\\). Tính bán kính \\(R\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.662022",
+  "name": "7a6236a3fe",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "7a6236a3fe",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7a6236a3fe",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7a6236a3fe",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7a6236a3fe",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Đoạn thẳng \\(AB = 12\\,cm\\), \\(I\\) là trung điểm của đoạn thẳng \\(AB\\). Quỹ tích các điểm \\(M\\) nhìn \\(AB\\) dưới một góc vuông là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.705067",
+  "name": "b7ffe97b1a",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "b7ffe97b1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b7ffe97b1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b7ffe97b1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b7ffe97b1a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Trong mặt phẳng tọa độ \\(Oxy\\), cho hai đường thẳng \\((d_1): y = 3x - 2\\) và \\((d_2): y = 2 - x\\). Gọi \\(A\\) là giao điểm của \\((d_1)\\) và \\((d_2)\\), khi đó tọa độ điểm \\(A\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.739107",
+  "name": "726a1d6ae0",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "726a1d6ae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "726a1d6ae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "726a1d6ae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "726a1d6ae0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho tam giác \\(ABC\\) vuông tại \\(A\\), đường cao \\(AH\\). Biết \\(AH = 6\\,cm\\), \\(CH = 9\\,cm\\). Tính độ dài cạnh \\(AB\\).",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.774651",
+  "name": "6352850586",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "6352850586",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "6352850586",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "6352850586",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "6352850586",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho đường tròn \\((O; 2\\,cm)\\), khi đó độ dài cung \\(60^\\circ\\) của đường tròn này bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.811621",
+  "name": "8a2c3f2943",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "8a2c3f2943",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "8a2c3f2943",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "8a2c3f2943",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "8a2c3f2943",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Khi \\(x = -1\\), biểu thức \\(\\sqrt{x^2 + 3}\\) có giá trị bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.836641",
+  "name": "f74b6d0961",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f74b6d0961",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "f74b6d0961",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f74b6d0961",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f74b6d0961",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Từ điểm \\(C\\) nằm ngoài \\((O; 3\\,cm)\\), kẻ các tiếp tuyến \\(CA, CB\\) với đường tròn (\\(A, B\\) là các tiếp điểm). Qua điểm \\(M\\) thuộc cung nhỏ \\(AB\\), kẻ tiếp tuyến với \\((O)\\), nó cắt \\(CA, CB\\) theo thứ tự ở \\(D, E\\). Biết \\(OC = 5\\,cm\\). Tính chu vi tam giác \\(CDE\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.875003",
+  "name": "c7f78cf15b",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "c7f78cf15b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "c7f78cf15b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "c7f78cf15b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "c7f78cf15b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho phương trình \\(x^2 + 3x - 4 = 0\\) có hai nghiệm \\(x_1, x_2\\). Biểu thức \\(x_1^2 x_2 + x_1 x_2^2\\) có giá trị là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.914277",
+  "name": "d7b3fb4077",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d7b3fb4077",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d7b3fb4077",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "d7b3fb4077",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "d7b3fb4077",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Với \\(a < b\\), biểu thức \\(\\frac{1}{a - b}\\sqrt{5 - b^2}\\) có kết quả rút gọn bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:50.936048",
+  "name": "0995be3e15",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "0995be3e15",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "0995be3e15",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "0995be3e15",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "0995be3e15",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Tìm tất cả các giá trị của \\(m\\) để phương trình \\(x^2 - 2mx - 2m - 2 = 0\\) có hai nghiệm trái dấu?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.061779",
+  "name": "591195576b",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "591195576b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "591195576b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "591195576b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "591195576b",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Điều kiện của \\(m\\) để hệ phương trình $$ \\begin{cases} m^2 x - 2y = 7 \\\\ 2x - y = -1 \\end{cases} $$ có nghiệm duy nhất?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.078616",
+  "name": "74899be773",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "74899be773",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "74899be773",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "74899be773",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "74899be773",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho hai dây \\(AB = 12\\,cm\\), \\(CD = 16\\,cm\\) song song và nằm khác phía so với tâm \\(O\\) của đường tròn \\((O; 10\\,cm)\\). Tính khoảng cách giữa hai dây \\(AB\\) và \\(CD\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.104046",
+  "name": "660c821dba",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "660c821dba",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "660c821dba",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "660c821dba",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "660c821dba",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Với giá trị nào của \\(a, b\\) thì hệ phương trình $$ \\begin{cases} ax + 3y = 4 \\\\ x + by = -2 \\end{cases} $$ có nghiệm \\((-1; 2)\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.136141",
+  "name": "92232b796a",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "92232b796a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "92232b796a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "92232b796a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "92232b796a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Đường thẳng nào sau đây đi qua điểm \\(A(0; 2)\\) và song song với đường thẳng \\(y = 2x\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.167413",
+  "name": "79e2e6f8c8",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "79e2e6f8c8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "79e2e6f8c8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "79e2e6f8c8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "79e2e6f8c8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho \\(\\cot \\alpha = 3\\). Khi đó \\(\\tan \\alpha\\) bằng",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.204205",
+  "name": "6d6fabede0",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "6d6fabede0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "6d6fabede0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "6d6fabede0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "6d6fabede0",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Bóng của một ngọn hải đăng được chiếu bởi ánh sáng mặt trời xuống mặt đất dài \\(65\\,m\\) và góc tạo bởi tia sáng mặt trời với mặt đất là \\(69^\\circ\\). Tính chiều cao của ngọn hải đăng? (làm tròn kết quả đến hàng đơn vị)",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.248188",
+  "name": "95e9de37de",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "95e9de37de",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "95e9de37de",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "95e9de37de",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "95e9de37de",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Đồ thị hàm số \\(y = ax^2\\) cắt đường thẳng \\(y = -2x + 3\\) tại điểm có hoành độ bằng \\(3\\). Giá trị của \\(a\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.275918",
+  "name": "35e4067cf8",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "35e4067cf8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "35e4067cf8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "35e4067cf8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "35e4067cf8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho biểu thức \\(A = \\frac{-6}{\\sqrt{x} - 2}\\) (\\(x \\geq 0; x \\neq 4\\)). Tính tổng các giá trị nguyên của \\(x\\) để \\(A\\) đạt giá trị nguyên âm?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.308422",
+  "name": "0bd4af63df",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "0bd4af63df",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "0bd4af63df",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "0bd4af63df",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "0bd4af63df",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho tam giác \\(ABC\\) đều có độ dài cạnh bằng \\(3\\,cm\\), ngoại tiếp đường tròn \\(I\\). Tính diện tích miền gạch sọc.",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.341767",
+  "name": "7632a8ac8a",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "7632a8ac8a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7632a8ac8a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7632a8ac8a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "7632a8ac8a",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Rút gọn biểu thức \\(23\\sqrt{x} - y \\sqrt{36x^5} - 2x^2 \\sqrt{49xy^2} + \\sqrt{16x}\\) với \\(x \\geq 0, y < 0\\) ta được kết quả là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.381442",
+  "name": "5e6a15b72c",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "5e6a15b72c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "5e6a15b72c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "5e6a15b72c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "5e6a15b72c",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho hai đường tròn \\((O; 20\\,cm)\\) và \\((O'; 15\\,cm)\\) cắt nhau tại \\(A, B\\). Biết \\(AB = 24\\,cm\\). \\(O, O'\\) nằm khác phía so với \\(AB\\). Tính độ dài đoạn nối tâm \\(OO'\\).",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.409483",
+  "name": "ff2c63f278",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "ff2c63f278",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ff2c63f278",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ff2c63f278",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ff2c63f278",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Từ một điểm \\(M\\) nằm ngoài đường tròn \\((O; R)\\) vẽ tiếp tuyến \\(MT\\) và cát tuyến \\(MAB\\) đi qua tâm \\(O\\) (\\(A\\) nằm giữa \\(M\\) và \\(B\\)). Biết \\(MT = 20\\,cm\\); \\(MB = 50\\,cm\\). Tính bán kính \\(R\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.444870",
+  "name": "4721a6a4d4",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "4721a6a4d4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "4721a6a4d4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "4721a6a4d4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "4721a6a4d4",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Trong mặt phẳng tọa độ \\(Oxy\\), cho ba đường thẳng \\((d_1): y = 2x + 3\\), \\((d_2): y = x + 5\\) và \\((d_3): y = (m - 1)x + 3\\) (với \\(m \\neq 1\\)) cùng đi qua một điểm. Tìm \\(m\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.469983",
+  "name": "ee1dfb198e",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ee1dfb198e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "ee1dfb198e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ee1dfb198e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "ee1dfb198e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho \\((O; R)\\) và dây cung \\(AB = 1,6R\\). Vẽ một tiếp tuyến song song với \\(AB\\), cắt các tia \\(OA, OB\\) theo thứ tự tại \\(M, N\\). Khi đó diện tích tam giác \\(OMN\\) tính theo \\(R\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.508727",
+  "name": "f1b1b0d35e",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f1b1b0d35e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f1b1b0d35e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "f1b1b0d35e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "f1b1b0d35e",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Một mảnh vườn hình chữ nhật có chu vi \\(40\\,m\\). Nếu giảm chiều dài \\(2\\,m\\), tăng chiều rộng \\(3\\,m\\) thì diện tích tăng \\(24\\,m^2\\). Gọi chiều dài và chiều rộng của mảnh vườn hình chữ nhật là \\(x\\,(m), y\\,(m)\\). Hãy chọn hệ phương trình biểu thị đúng quan hệ giữa \\(x, y\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.564421",
+  "name": "c5083beba8",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "c5083beba8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "c5083beba8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "c5083beba8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "c5083beba8",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Khi sản xuất vỏ lon sơn hình trụ, nhà sản xuất luôn đặt mục tiêu sao cho chi phí nguyên liệu làm vỏ lon là thấp nhất (tức diện tích toàn phần của vỏ lon là nhỏ nhất). Một lon sơn có dung tích \\(5\\) lít thì nhà sản xuất cần phải thiết kế vỏ lon có bán kính đáy \\(R\\) bằng bao nhiêu để chi phí nguyên liệu thấp nhất?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.629516",
+  "name": "b0dac2f490",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b0dac2f490",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "b0dac2f490",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b0dac2f490",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "b0dac2f490",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Số nghiệm của phương trình \\(\\sqrt{x^2 - 4x + 4} = 2 - x\\) là",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.670114",
+  "name": "3eb8cb68f1",
+  "options": [
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "3eb8cb68f1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "3eb8cb68f1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "3eb8cb68f1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "3eb8cb68f1",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Có bao nhiêu số tự nhiên \\(m\\) để hệ phương trình $$ \\begin{cases} 4x + my = -m + 10 \\\\ mx + y = 4 \\end{cases} $$ có nghiệm duy nhất \\((x; y)\\) thỏa mãn \\(x > 0; y > 0\\)?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.706802",
+  "name": "991b3ade56",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "991b3ade56",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "991b3ade56",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "991b3ade56",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "991b3ade56",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Gọi \\(x_1, x_2\\) là hai nghiệm của phương trình \\(x^2 - (m + 1)x - 3 = 0\\) (\\(m\\) là tham số). Biểu thức $$B = \\frac{3x_1^2 + 3x_2^2 + 4x_1 + 4x_2 - 5}{x_1^2 + x_2^2 - 4}$$ có giá trị nhỏ nhất là \\(a\\) tại \\(m = b\\). Khi đó, khẳng định nào sau đây là đúng?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.749939",
+  "name": "8d71d7e735",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "8d71d7e735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "8d71d7e735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "8d71d7e735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "8d71d7e735",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Cho tam giác \\(ABC\\) vuông ở \\(A\\) có \\(AB = 6\\,cm; AC = 8\\,cm\\). Vẽ nửa đường tròn đường kính \\(BC\\) đi qua \\(A\\). Ở miền ngoài của tam giác \\(ABC\\), vẽ hai nửa đường tròn có đường kính lần lượt là \\(AB\\) và \\(AC\\). Tính tổng diện tích hai hình lưỡi liềm?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:51.789730",
+  "name": "84fd16bec9",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "84fd16bec9",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "84fd16bec9",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "84fd16bec9",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "84fd16bec9",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ },
+ {
+  "answer_key": null,
+  "cognitive_level": "NB",
+  "content": "Hệ phương trình nào sau đây vô nghiệm?",
+  "docstatus": 0,
+  "doctype": "Question",
+  "explanation": null,
+  "hint": null,
+  "image_url": null,
+  "marks": 0.0,
+  "modified": "2025-05-17 22:42:49.840038",
+  "name": "11d3bdbc10",
+  "options": [
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "11d3bdbc10",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "11d3bdbc10",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 1,
+    "option_text": null,
+    "parent": "11d3bdbc10",
+    "parentfield": "options",
+    "parenttype": "Question"
+   },
+   {
+    "is_correct": 0,
+    "option_text": null,
+    "parent": "11d3bdbc10",
+    "parentfield": "options",
+    "parenttype": "Question"
+   }
+  ],
+  "question_type": "Multiple Choice"
+ }
+]

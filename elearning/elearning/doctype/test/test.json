@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2025-04-27 17:32:04.727502",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "grade_level",
+  "topic",
+  "difficulty_level",
+  "test_type",
+  "time_limit_minutes",
+  "passing_score",
+  "instructions",
+  "questions",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "grade_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Grade Level",
+   "options": "9\n8"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Topic"
+  },
+  {
+   "fieldname": "difficulty_level",
+   "fieldtype": "Select",
+   "label": "Difficulty Level",
+   "options": "D\u1ec5\nTrung b\u00ecnh\nKh\u00f3"
+  },
+  {
+   "fieldname": "test_type",
+   "fieldtype": "Select",
+   "label": "Test Type",
+   "options": "Exam\nPractice\nAssessment"
+  },
+  {
+   "fieldname": "time_limit_minutes",
+   "fieldtype": "Int",
+   "label": "Time Limit Minutes"
+  },
+  {
+   "fieldname": "passing_score",
+   "fieldtype": "Float",
+   "label": "Passing Score"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Text Editor",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "questions",
+   "fieldtype": "Table",
+   "label": "Questions",
+   "options": "Test Question Item",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-15 00:53:38.897824",
+ "modified_by": "Administrator",
+ "module": "Elearning",
+ "name": "Test",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

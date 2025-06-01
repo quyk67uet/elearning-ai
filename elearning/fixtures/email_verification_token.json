@@ -1,0 +1,222 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "quyk67uet@gmail.com",
+  "expiry": "2025-05-12 22:15:46.192334",
+  "modified": "2025-05-11 22:16:02.669410",
+  "name": "tqlcc4qrfr",
+  "redirect_to": "",
+  "token": "xtkYrILrPFnGvp84Q2dYKikXthRS4vMakzAfM6Is",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "quyk67uet@gmail.com",
+  "expiry": "2025-05-12 23:12:36.342891",
+  "modified": "2025-05-11 23:17:26.440314",
+  "name": "v4b3gkjkg8",
+  "redirect_to": "http://localhost:3000/auth/verify-email?status=success&email=quyk67uet%40gmail.com",
+  "token": "XUAUriuLkwfMR6IByuXACHK4pfAhDG02nPNLS8bq",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "quyk67uet@gmail.com",
+  "expiry": "2025-05-12 23:22:59.312138",
+  "modified": "2025-05-11 23:23:23.236716",
+  "name": "5717f9tjda",
+  "redirect_to": "http://localhost:3000/auth/verify-email?status=success&email=quyk67uet%40gmail.com",
+  "token": "rs6fAO6hRsM3qIezvLr3xSxoEKFRbfCoEtYjrds2",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "quyk67uet@gmail.com",
+  "expiry": "2025-05-13 21:44:45.804091",
+  "modified": "2025-05-12 21:45:41.180764",
+  "name": "ndaeq2aeei",
+  "redirect_to": "http://localhost:3000/auth/verify-email?status=success&email=quyk67uet%40gmail.com",
+  "token": "9ZH5NeU2ixQFbkFLjzra3nrTufxUOqjkkjG1rCFy",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "quyk67uet@gmail.com",
+  "expiry": "2025-05-13 21:53:02.690800",
+  "modified": "2025-05-12 21:53:02.693602",
+  "name": "s8ienh52ga",
+  "redirect_to": "http://localhost:3000/auth/verify-email?status=success&email=quyk67uet%40gmail.com",
+  "token": "mFrLSCblKvM9O2CFJh9OUp3RqAoswWHtweb0WlhK",
+  "used": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-13 22:03:23.724873",
+  "modified": "2025-05-12 22:03:44.018930",
+  "name": "2al5gp0oji",
+  "redirect_to": "http://localhost:3000/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "Im6IbsjfsvakG6GWZyjmKtUXxenLVRsurL5eSA1g",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-13 22:21:39.599476",
+  "modified": "2025-05-12 22:22:05.603511",
+  "name": "d14roi0hjt",
+  "redirect_to": "http://localhost:3000/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "7jXci1pCH3gdUkgw5viRburLvAgBuOewhMjhrh2b",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-13 23:22:00.137384",
+  "modified": "2025-05-12 23:22:21.222251",
+  "name": "gch3dma4mj",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "OCs6B7py90uv07UmlPTXGuWlmm1ABfQqgchUIbns",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-14 12:21:30.637028",
+  "modified": "2025-05-13 12:21:55.894920",
+  "name": "p4acc0dv42",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "HLO4c4a5ZxSqRRXnEcrBIsllC3zIjxuGC8yb01oX",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-14 12:58:57.805065",
+  "modified": "2025-05-13 12:59:19.829225",
+  "name": "f2iiicqu01",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "3Er9J3JxPp5E0OHgLhFljvnyqXyPj0qJaf5d3Ubq",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-14 13:50:04.385768",
+  "modified": "2025-05-13 13:50:36.729534",
+  "name": "d0rtm1o50u",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "WQYBbilXRTcx6O5hkVMXQfxPMLYvM3cPOPXuRibh",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-14 14:13:22.616745",
+  "modified": "2025-05-13 14:13:44.800310",
+  "name": "qlq53khs44",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "2JzOyya5VmyQSfeaCMta902vvU3ArKNm9g4jWqPI",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-14 14:17:16.118341",
+  "modified": "2025-05-13 14:17:26.457164",
+  "name": "supstmfe30",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "palE4f0mzyrO5mM3uOvPjTbp8ckFoyeftq8IHnma",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "gamauvang26@gmail.com",
+  "expiry": "2025-05-18 18:07:13.135676",
+  "modified": "2025-05-17 18:07:13.140678",
+  "name": "imb1hc6jsm",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=gamauvang26%40gmail.com",
+  "token": "54GN5RsHgyB369Zwim95cJCLTmQp0plgSL4GjqLR",
+  "used": 0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "minhquyle2302@gmail.com",
+  "expiry": "2025-05-18 18:15:35.697536",
+  "modified": "2025-05-17 18:15:47.889494",
+  "name": "njdfgi4t0k",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=minhquyle2302%40gmail.com",
+  "token": "MPnivRm60pazGyWWCUOPAKcLOduXCUJIFMn2JVxU",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "gamauvang26@gmail.com",
+  "expiry": "2025-05-18 17:41:10.819405",
+  "modified": "2025-05-17 17:41:28.197346",
+  "name": "3e4fm23io2",
+  "redirect_to": "http://math.local/auth/verify-email?status=success&email=gamauvang26%40gmail.com",
+  "token": "gZC6xxniPZtzuU2q2M6gZ8UoDDR7aUKvBlGm26h4",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "gamauvang26@gmail.com",
+  "expiry": "2025-05-18 17:43:00.035828",
+  "modified": "2025-05-17 17:43:11.093275",
+  "name": "4g8af2rh1u",
+  "redirect_to": "http://math.local/auth/verify-email?status=success&email=gamauvang26%40gmail.com",
+  "token": "lyHlg0Reb7OA3tbmBQ4n09WR9M6f0aT8USt6bjRm",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "gamauvang26@gmail.com",
+  "expiry": "2025-05-18 18:13:44.109915",
+  "modified": "2025-05-17 18:13:53.886926",
+  "name": "mghrrahbo2",
+  "redirect_to": "http://math.local/auth/verify-email?status=success&email=gamauvang26%40gmail.com",
+  "token": "HZNjkd4yYMm1Hz9tqzeUfcr9Ow4UnOVStxvoLaTu",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "gamauvang26@gmail.com",
+  "expiry": "2025-05-18 19:08:03.161582",
+  "modified": "2025-05-17 19:08:15.248106",
+  "name": "mavjcova4g",
+  "redirect_to": "http://math.local/auth/verify-email?status=success&email=gamauvang26%40gmail.com",
+  "token": "MMzBBajx7Q1xrGiSEnh9VKrqpOiAcewpWEWoWPxA",
+  "used": 1
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Email Verification Token",
+  "email": "22028190@vnu.edu.vn",
+  "expiry": "2025-05-20 20:14:02.740407",
+  "modified": "2025-05-19 20:14:15.336534",
+  "name": "kgbi1ggru1",
+  "redirect_to": "http://learn.local/auth/verify-email?status=success&email=22028190%40vnu.edu.vn",
+  "token": "MjyfVUvWgTHWSJqUSsIQOMJoBRb5RBhdzpxWPWD7",
+  "used": 1
+ }
+]
