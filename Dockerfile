@@ -29,10 +29,9 @@ USER frappe
 # 7. Thiết lập thư mục làm việc
 WORKDIR /app
 
-# 8. Cài đặt Frappe Bench, Gunicorn và cập nhật PATH
+# 8. Cài đặt Frappe Bench và cập nhật PATH
 RUN pip install --user --upgrade pip \
-    && pip install --user --no-warn-script-location frappe-bench \
-    && pip install --user gunicorn
+    && pip install --user --no-warn-script-location frappe-bench
 
 # Cập nhật PATH để bao gồm thư mục bin của user
 ENV PATH="/home/frappe/.local/bin:$PATH"
