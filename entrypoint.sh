@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Enable debugging mode for the script - this will print each command before execution
+set -x
+
 mkdir -p /app/elearning-bench/sites/learn.local/logs
 
 # Tạo file ca.pem từ environment variable
@@ -13,6 +16,15 @@ fi
 # Kiểm tra xem site đã tồn tại chưa
 if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-bench/sites/learn.local/site_config.json" ]; then
     echo "Creating new site learn.local..."
+    
+    # DEBUG: Printing DB connection details before bench new-site
+    echo "DEBUG: Attempting bench new-site with:"
+    echo "DEBUG:   DB_HOST=frappe-mysql-minhquyle2302-0634.g.aivencloud.com"
+    echo "DEBUG:   DB_PORT=23211"
+    echo "DEBUG:   DB_NAME=defaultdb"
+    echo "DEBUG:   DB_USER=avnadmin"
+    echo "DEBUG:   DB_PASSWORD=AVNS_tQP-rD9ZqxsBUkELuvy (Note: hardcoded password is not recommended for production)"
+    echo "DEBUG:   DB_TYPE=mariadb"
     
     # Tạo site với database connection
     bench new-site learn.local \
@@ -30,7 +42,7 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
     
     # Cấu hình site với thông tin đầy đủ
     echo "Configuring site..."
-    echo '{
+    SITE_CONFIG_CONTENT='{
         "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com",
         "db_port": 23211,
         "db_name": "defaultdb",
@@ -61,7 +73,12 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
         "smtp_server": "smtp.gmail.com",
         "gemini_api_key": "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE",
         "use_tls": 1
-    }' > /app/elearning-bench/sites/learn.local/site_config.json
+    }'
+    echo "$SITE_CONFIG_CONTENT" > /app/elearning-bench/sites/learn.local/site_config.json
+    
+    # DEBUG: Print the content of site_config.json after creation/update
+    echo "DEBUG: Contents of /app/elearning-bench/sites/learn.local/site_config.json after configuration:"
+    cat /app/elearning-bench/sites/learn.local/site_config.json
     
     # Import fixtures
     echo "Importing fixtures..."
@@ -70,6 +87,9 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
     echo "Site setup completed!"
 else
     echo "Site learn.local already exists, skipping setup..."
+    # DEBUG: Print the content of site_config.json if it already exists
+    echo "DEBUG: Contents of existing /app/elearning-bench/sites/learn.local/site_config.json:"
+    cat /app/elearning-bench/sites/learn.local/site_config.json
 fi
 
 # Set site mặc định
