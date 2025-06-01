@@ -64,11 +64,26 @@ RUN echo '{ \
     "db_type": "mariadb" \
 }' > /app/elearning-bench/sites/common_site_config.json
 
-# 14. Tạo site learn.local với Aiven MySQL
-RUN bench new-site learn.local --db-type mariadb --force
+# 13c. Set environment variables cho database connection
+ENV DB_HOST=frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
+    DB_PORT=23211 \
+    DB_NAME=defaultdb \
+    DB_USER=avnadmin \
+    DB_PASSWORD=AVNS_tQP-rD9ZqxsBUkELuvy
 
-# 15. Cài đặt app elearning
-RUN bench --site learn.local install-app elearning
+# 14. Skip tạo site trong build phase, sẽ tạo trong runtime
+# (Comment out để tạo site trong entrypoint.sh thay vì build time)
+# RUN bench new-site learn.local \
+#     --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
+#     --db-port 23211 \
+#     --db-name defaultdb \
+#     --db-user avnadmin \
+#     --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
+#     --db-type mariadb \
+#     --force
+
+# 15. Skip cài đặt app trong build phase (sẽ làm trong runtime)
+# RUN bench --site learn.local install-app elearning
 
 # 16. Cấu hình site với thông tin database và redis
 RUN echo '{ \
@@ -104,8 +119,8 @@ RUN echo '{ \
     "use_tls": 1 \
 }' > /app/elearning-bench/sites/learn.local/site_config.json
 
-# 17. Import fixtures vào database
-RUN bench --site learn.local import-fixtures
+# 17. Skip import fixtures trong build phase (sẽ làm trong runtime)
+# RUN bench --site learn.local import-fixtures
 
 # 18. Copy entrypoint.sh vào container
 COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh
