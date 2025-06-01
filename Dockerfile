@@ -1,7 +1,14 @@
 # 1. Chọn base image
 FROM python:3.10
 
-# 2. Cài đặt các phụ thuộc hệ thống cần thiết
+# 2. Cài đặt Node.js (sử dụng NodeSource repository)
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    && apt-get install -y nodejs
+
+# 3. Cài đặt Yarn
+RUN npm install -g yarn
+
+# 4. Cài đặt các phụ thuộc hệ thống cần thiết
 RUN apt-get update && apt-get install -y \
     build-essential \
     libmariadb-dev-compat \
@@ -12,43 +19,43 @@ RUN apt-get update && apt-get install -y \
     redis-server \
     && rm -rf /var/lib/apt/lists/*
 
-# 3. Tạo user không phải root để chạy lệnh bench
+# 5. Tạo user không phải root để chạy lệnh bench
 RUN useradd -m -s /bin/bash frappe \
     && mkdir -p /app \
     && chown -R frappe:frappe /app
 
-# 4. Chuyển sang user frappe
+# 6. Chuyển sang user frappe
 USER frappe
 
-# 5. Thiết lập thư mục làm việc
+# 7. Thiết lập thư mục làm việc
 WORKDIR /app
 
-# 6. Cài đặt Frappe Bench và cập nhật PATH
+# 8. Cài đặt Frappe Bench và cập nhật PATH
 RUN pip install --user --upgrade pip \
     && pip install --user --no-warn-script-location frappe-bench
 
 # Cập nhật PATH để bao gồm thư mục bin của user
 ENV PATH="/home/frappe/.local/bin:$PATH"
 
-# 7. Khởi tạo elearning-bench
+# 9. Khởi tạo elearning-bench
 RUN bench init --skip-redis-config-generation elearning-bench --frappe-branch version-15
 
-# 8. Chuyển đến thư mục elearning-bench
+# 10. Chuyển đến thư mục elearning-bench
 WORKDIR /app/elearning-bench
 
-# 9. Copy app elearning từ repository
+# 11. Copy app elearning từ repository
 COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 
-# 10. Cài đặt dependencies của app elearning
+# 12. Cài đặt dependencies của app elearning
 RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
 
-# 11. Tạo site learn.local
+# 13. Tạo site learn.local
 RUN bench new-site learn.local --db-type mysql --force
 
-# 12. Cài đặt app elearning
+# 14. Cài đặt app elearning
 RUN bench --site learn.local install-app elearning
 
-# 13. Cấu hình site với thông tin database và redis
+# 15. Cấu hình site với thông tin database và redis
 RUN echo '{ \
     "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com", \
     "db_port": 23211, \
@@ -82,12 +89,12 @@ RUN echo '{ \
     "use_tls": 1 \
 }' > /app/elearning-bench/sites/learn.local/site_config.json
 
-# 14. Import fixtures vào database
+# 16. Import fixtures vào database
 RUN bench --site learn.local import-fixtures
 
-# 15. Copy entrypoint.sh vào container
+# 17. Copy entrypoint.sh vào container
 COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh
 RUN chmod +x /app/elearning-bench/entrypoint.sh
 
-# 16. Sử dụng entrypoint.sh để khởi động
+# 18. Sử dụng entrypoint.sh để khởi động
 CMD ["/app/elearning-bench/entrypoint.sh"]
