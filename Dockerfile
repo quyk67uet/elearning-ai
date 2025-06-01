@@ -13,10 +13,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     libmariadb-dev-compat \
     libmariadb-dev \
-    mariadb-client \
     git \
     curl \
-    redis-server \
     cron \
     && rm -rf /var/lib/apt/lists/*
 
@@ -50,11 +48,19 @@ COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 # 12. Cài đặt dependencies của app elearning
 RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
 
-# Thêm biến môi trường cho mật khẩu MySQL root
-ENV MYSQL_ROOT_PASSWORD=2302
+# 13. Tạo file common_site_config.json để cấu hình Aiven MySQL trước khi tạo site
+RUN echo '{ \
+    "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com", \
+    "db_port": 23211, \
+    "db_name": "defaultdb", \
+    "db_user": "avnadmin", \
+    "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy", \
+    "db_type": "mariadb", \
+    "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem", \
+}' > /app/elearning-bench/sites/common_site_config.json
 
-# 13. Tạo site learn.local
-RUN bench new-site learn.local --db-type mariadb --force --admin-password adminpassword --mariadb-root-password $MYSQL_ROOT_PASSWORD
+# 14. Tạo site learn.local với Aiven MySQL
+RUN bench new-site learn.local --db-type mariadb --force
 
 # 14. Cài đặt app elearning
 RUN bench --site learn.local install-app elearning
