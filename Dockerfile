@@ -25,10 +25,10 @@ WORKDIR /app
 
 # 6. Cài đặt Frappe Bench
 RUN pip install --user --upgrade pip \
-    && pip install --user frappe-bench
+    && pip install --user --no-warn-script-location frappe-bench
 
 # 7. Khởi tạo elearning-bench
-RUN /home/frappe/.local/bin/bench init --skip-redis-config elearning-bench --frappe-branch version-15 \
+RUN bench init --skip-redis-config-generation elearning-bench --frappe-branch version-15 \
     && cd elearning-bench
 
 # 8. Copy app elearning từ repository
