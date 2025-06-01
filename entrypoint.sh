@@ -70,6 +70,9 @@ else
     echo "Site learn.local already exists, skipping setup..."
 fi
 
+# Set site mặc định
+bench use learn.local
+
 # Khởi động Frappe server
 echo "Starting Frappe server..."
 bench serve --port $PORT
