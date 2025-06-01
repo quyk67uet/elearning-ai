@@ -1,0 +1,4 @@
+www/nextjs-app/
+*.log
+__pycache__/
+*.pyc
