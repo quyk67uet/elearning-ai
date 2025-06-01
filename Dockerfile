@@ -4,10 +4,12 @@ FROM python:3.10
 # 2. Cài đặt các phụ thuộc hệ thống cần thiết
 RUN apt-get update && apt-get install -y \
     build-essential \
-    libmysqlclient-dev \
+    libmariadb-dev-compat \
+    libmariadb-dev \
     mariadb-client \
     git \
     curl \
+    redis-server \
     && rm -rf /var/lib/apt/lists/*
 
 # 3. Tạo user không phải root để chạy lệnh bench
