@@ -51,7 +51,7 @@ COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
 
 # 13. Tạo site learn.local
-RUN bench new-site learn.local --db-type mysql --force
+RUN bench new-site learn.local --db-type mariadb --force
 
 # 14. Cài đặt app elearning
 RUN bench --site learn.local install-app elearning
