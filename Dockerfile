@@ -80,5 +80,7 @@ RUN /home/frappe/.local/bin/bench --site learn.local import-fixtures
 COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh
 RUN chmod +x /app/elearning-bench/entrypoint.sh
 
+ENV PATH="/home/frappe/.local/bin:$PATH"
+
 # 12a. Sử dụng entrypoint.sh để khởi động
 CMD ["/app/elearning-bench/entrypoint.sh"]
