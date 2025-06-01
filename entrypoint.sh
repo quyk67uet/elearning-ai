@@ -70,10 +70,14 @@ else
     echo "Site learn.local already exists, skipping setup..."
 fi
 
-# Cấu hình site để serve từ root domain
-echo "Configuring site routing..."
-echo "learn.local" > /app/elearning-bench/sites/currentsite.txt
+# Set default site (thay vì dùng currentsite.txt deprecated)
+echo "Setting default site..."
+bench use learn.local
 
-# Khởi động Frappe server với host binding cho production
+# Khởi động Frappe server cho production
 echo "Starting Frappe server..."
-bench serve --host 0.0.0.0 --port $PORT
+
+# Phương pháp 1: Sử dụng gunicorn trực tiếp (khuyến nghị cho production)
+cd /app/elearning-bench
+
+exec bench serve --port $PORT
