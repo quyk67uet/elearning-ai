@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     redis-server \
+    cron \
     && rm -rf /var/lib/apt/lists/*
 
 # 5. Tạo user không phải root để chạy lệnh bench
@@ -37,8 +38,8 @@ RUN pip install --user --upgrade pip \
 # Cập nhật PATH để bao gồm thư mục bin của user
 ENV PATH="/home/frappe/.local/bin:$PATH"
 
-# 9. Khởi tạo elearning-bench
-RUN bench init --skip-redis-config-generation elearning-bench --frappe-branch version-15
+# 9. Khởi tạo elearning-bench (skip cron setup for container environment)
+RUN bench init --skip-redis-config-generation --skip-backup-cron elearning-bench --frappe-branch version-15
 
 # 10. Chuyển đến thư mục elearning-bench
 WORKDIR /app/elearning-bench
