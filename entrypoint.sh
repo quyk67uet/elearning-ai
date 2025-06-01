@@ -70,6 +70,16 @@ else
     echo "Site learn.local already exists, skipping setup..."
 fi
 
-# Khởi động Frappe server
-echo "Starting Frappe server..."
-bench serve --port $PORT
+# Cấu hình site để serve từ root domain
+echo "Configuring site routing..."
+echo "learn.local" > /app/elearning-bench/sites/currentsite.txt
+
+# Khởi động Frappe server với Gunicorn (Production WSGI server)
+echo "Starting Frappe server with Gunicorn..."
+gunicorn -b 0.0.0.0:$PORT \
+    -w 4 \
+    --timeout 120 \
+    --preload \
+    --max-requests 1000 \
+    --max-requests-jitter 50 \
+    frappe.app:application
