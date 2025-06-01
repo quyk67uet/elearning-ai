@@ -9,23 +9,47 @@ if [ -n "$CA_PEM_CONTENT" ]; then
     echo "CA certificate created successfully"
 else
     echo "Warning: CA_PEM_CONTENT environment variable not set"
+    # Tạo file ca.pem trống để tránh lỗi
+    touch /app/elearning-bench/sites/learn.local/ca.pem
 fi
+
+# Test database connection
+echo "Testing database connection..."
+python3 -c "
+import pymysql
+import os
+try:
+    ssl_ca = '/app/elearning-bench/sites/learn.local/ca.pem' if os.path.exists('/app/elearning-bench/sites/learn.local/ca.pem') and os.path.getsize('/app/elearning-bench/sites/learn.local/ca.pem') > 0 else None
+    conn = pymysql.connect(
+        host='frappe-mysql-minhquyle2302-0634.g.aivencloud.com',
+        port=23211,
+        user='avnadmin',
+        password='AVNS_tQP-rD9ZqxsBUkELuvy',
+        database='defaultdb',
+        ssl_ca=ssl_ca
+    )
+    print('✅ Database connection successful!')
+    conn.close()
+except Exception as e:
+    print(f'❌ Database connection failed: {e}')
+    print('Continuing with setup...')
+"
 
 # Kiểm tra xem site đã tồn tại chưa
 if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-bench/sites/learn.local/site_config.json" ]; then
     echo "Creating new site learn.local..."
-
-    # Tạo site với thông tin kết nối đầy đủ từ dòng lệnh
+    
+    # Tạo site với thông tin kết nối đầy đủ
     bench new-site learn.local \
         --db-type mariadb \
         --db-name defaultdb \
-        --mariadb-root-username avnadmin \
-        --mariadb-root-password 'AVNS_tQP-rD9ZqxsBUkELuvy' \
+        --db-user avnadmin \
+        --db-password 'AVNS_tQP-rD9ZqxsBUkELuvy' \
         --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
         --db-port 23211 \
         --force
-
-    # Cấu hình site bằng cách tạo site_config.json
+    
+    # Cấu hình site bằng cách tạo site_config.json với SSL
     echo "Creating site_config.json..."
     cat > /app/elearning-bench/sites/learn.local/site_config.json <<EOF
 {
@@ -36,6 +60,9 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
     "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy",
     "db_type": "mariadb",
     "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem",
+    "db_ssl_cert": "",
+    "db_ssl_key": "",
+    "db_ssl_check_hostname": false,
     "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379",
     "redis_queue": "redis://red-d0194tqdbo4c73fvoe0g:6379",
     "redis_socketio": "redis://red-d0194tqdbo4c73fvoe0g:6379",
@@ -61,15 +88,15 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
     "use_tls": 1
 }
 EOF
-
+    
     # Cài đặt ứng dụng elearning
     echo "Installing elearning app..."
     bench --site learn.local install-app elearning
-
+    
     # Import dữ liệu mẫu (fixtures)
     echo "Importing fixtures..."
     bench --site learn.local import-fixtures
-
+    
     echo "Site setup completed!"
 else
     echo "Site learn.local already exists, skipping setup..."

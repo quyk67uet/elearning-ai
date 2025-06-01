@@ -48,20 +48,21 @@ COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 # 12. Cài đặt dependencies của app elearning
 RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
 
-# 13. Tạo thư mục sites/learn.local và ca.pem file
+# 13. Tạo thư mục sites/learn.local
 RUN mkdir -p /app/elearning-bench/sites/learn.local
 
-# 13a. Tạo file ca.pem từ environment variable (sẽ được tạo lại trong entrypoint)
+# 13a. Tạo file ca.pem placeholder (sẽ được cập nhật trong entrypoint)
 RUN touch /app/elearning-bench/sites/learn.local/ca.pem
 
-# 13b. Tạo file common_site_config.json để cấu hình Aiven MySQL trước khi tạo site
+# 13b. Tạo file common_site_config.json với cấu hình database đúng
 RUN echo '{ \
     "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com", \
     "db_port": 23211, \
     "db_name": "defaultdb", \
     "db_user": "avnadmin", \
     "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy", \
-    "db_type": "mariadb" \
+    "db_type": "mariadb", \
+    "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem" \
 }' > /app/elearning-bench/sites/common_site_config.json
 
 # 13c. Set environment variables cho database connection
@@ -71,21 +72,7 @@ ENV DB_HOST=frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
     DB_USER=avnadmin \
     DB_PASSWORD=AVNS_tQP-rD9ZqxsBUkELuvy
 
-# 14. Skip tạo site trong build phase, sẽ tạo trong runtime
-# (Comment out để tạo site trong entrypoint.sh thay vì build time)
-# RUN bench new-site learn.local \
-#     --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
-#     --db-port 23211 \
-#     --db-name defaultdb \
-#     --db-user avnadmin \
-#     --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
-#     --db-type mariadb \
-#     --force
-
-# 15. Skip cài đặt app trong build phase (sẽ làm trong runtime)
-# RUN bench --site learn.local install-app elearning
-
-# 16. Cấu hình site với thông tin database và redis
+# 16. Tạo site_config.json template với SSL configuration
 RUN echo '{ \
     "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com", \
     "db_port": 23211, \
@@ -94,6 +81,9 @@ RUN echo '{ \
     "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy", \
     "db_type": "mariadb", \
     "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem", \
+    "db_ssl_cert": "", \
+    "db_ssl_key": "", \
+    "db_ssl_check_hostname": false, \
     "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379", \
     "redis_queue": "redis://red-d0194tqdbo4c73fvoe0g:6379", \
     "redis_socketio": "redis://red-d0194tqdbo4c73fvoe0g:6379", \
@@ -118,9 +108,6 @@ RUN echo '{ \
     "gemini_api_key": "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE", \
     "use_tls": 1 \
 }' > /app/elearning-bench/sites/learn.local/site_config.json
-
-# 17. Skip import fixtures trong build phase (sẽ làm trong runtime)
-# RUN bench --site learn.local import-fixtures
 
 # 18. Copy entrypoint.sh vào container
 COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh
