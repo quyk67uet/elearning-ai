@@ -4,7 +4,7 @@
 set -xe
 
 # Define paths and variables
-SITE_NAME="learn.local"
+SITE_NAME="learn1.local"
 SITE_PATH="/app/elearning-bench/sites/$SITE_NAME"
 LOG_DIR="$SITE_PATH/logs"
 CA_CERT_PATH="$SITE_PATH/ca.pem"
