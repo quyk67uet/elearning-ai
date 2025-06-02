@@ -1,73 +1,85 @@
 #!/bin/bash
+set -xe # Exit on error, print commands
 
-# Tạo thư mục logs nếu chưa tồn tại
-mkdir -p /app/elearning-bench/sites/learn.local/logs
+# Bắt buộc:
+: "${DB_HOST?DB_HOST not set or empty}"
+: "${DB_PORT?DB_PORT not set or empty}"
+: "${DB_NAME_APP?DB_NAME_APP not set or empty}"
+: "${DB_USER_APP?DB_USER_APP not set or empty}"
+: "${DB_PASSWORD_APP?DB_PASSWORD_APP not set or empty}"
+: "${REDIS_CACHE_URL?REDIS_CACHE_URL not set or empty}"
+: "${REDIS_QUEUE_URL?REDIS_QUEUE_URL not set or empty}"
+: "${REDIS_SOCKETIO_URL?REDIS_SOCKETIO_URL not set or empty}"
+: "${CA_PEM_CONTENT?CA_PEM_CONTENT not set or empty}"
+: "${FRONTEND_URL?FRONTEND_URL not set or empty}"
+: "${JWT_SECRET?JWT_SECRET not set or empty}" 
+: "${ENCRYPTION_KEY?ENCRYPTION_KEY not set or empty}" 
+: "${SITE_NAME_VAR?SITE_NAME_VAR not set or empty}" # Ví dụ: learn.local
+: "${ADMIN_PASSWORD?ADMIN_PASSWORD not set or empty}" # Mật khẩu cho user Administrator
+: "${PORT?PORT not set or empty}" 
 
-# Tạo file ca.pem từ biến môi trường nếu có
-if [ -n "$CA_PEM_CONTENT" ]; then
-    echo "$CA_PEM_CONTENT" > /app/elearning-bench/sites/learn.local/ca.pem
-    echo "CA certificate created successfully"
-else
-    echo "Warning: CA_PEM_CONTENT environment variable not set"
-    # Tạo file ca.pem trống để tránh lỗi
-    touch /app/elearning-bench/sites/learn.local/ca.pem
+# Cấu hình Email 
+AUTO_EMAIL_ID="${AUTO_EMAIL_ID:-noreply@$(echo $SITE_NAME_VAR | sed 's/^[^.]*\.//')}"
+: "${EMAIL_ACCOUNT:=$AUTO_EMAIL_ID}" 
+: "${MAIL_LOGIN?MAIL_LOGIN for SMTP not set or empty (required if using SMTP)}"
+: "${MAIL_PASSWORD?MAIL_PASSWORD for SMTP not set or empty (required if using SMTP)}"
+: "${SMTP_SERVER?SMTP_SERVER not set or empty (required if using SMTP)}"
+SMTP_PORT="${SMTP_PORT:-587}" 
+
+# API Keys
+: "${GEMINI_API_KEY?GEMINI_API_KEY not set or empty (if Gemini integration is used)}"
+# --- Kết thúc khai báo biến môi trường ---
+
+SITE_PATH="/app/elearning-bench/sites/$SITE_NAME_VAR"
+CA_PEM_FILE="$SITE_PATH/ca.pem"
+
+mkdir -p "$SITE_PATH/logs"
+
+# Tạo file ca.pem từ biến môi trường
+echo "Creating CA certificate..."
+echo "$CA_PEM_CONTENT" > "$CA_PEM_FILE"
+if [ ! -s "$CA_PEM_FILE" ]; then
+    echo "ERROR: CA_PEM_FILE is empty. CA_PEM_CONTENT environment variable might not be set correctly."
+    exit 1
 fi
+echo "CA certificate created successfully at $CA_PEM_FILE"
 
-# Test database connection
-echo "Testing database connection..."
-python3 -c "
-import pymysql
-import os
-try:
-    ssl_ca = '/app/elearning-bench/sites/learn.local/ca.pem' if os.path.exists('/app/elearning-bench/sites/learn.local/ca.pem') and os.path.getsize('/app/elearning-bench/sites/learn.local/ca.pem') > 0 else None
-    conn = pymysql.connect(
-        host='frappe-mysql-minhquyle2302-0634.g.aivencloud.com',
-        port=23211,
-        user='avnadmin',
-        password='AVNS_tQP-rD9ZqxsBUkELuvy',
-        database='defaultdb',
-        ssl_ca=ssl_ca
-    )
-    print('✅ Database connection successful!')
-    conn.close()
-except Exception as e:
-    print(f'❌ Database connection failed: {e}')
-    print('Continuing with setup...')
-"
+APP_INSTALLED_FLAG="$SITE_PATH/.app_elearning_installed"
 
-# Kiểm tra xem site đã tồn tại chưa
-if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-bench/sites/learn.local/site_config.json" ]; then
-    echo "Creating new site learn.local..."
-    
-    # Tạo site với thông tin kết nối đầy đủ
-    bench new-site learn.local \
-        --db-type mariadb \
-        --db-name defaultdb \
-        --db-user avnadmin \
-        --db-password 'AVNS_tQP-rD9ZqxsBUkELuvy' \
-        --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
-        --db-port 23211 \
-        --force
-    
-    # Cấu hình site bằng cách tạo site_config.json với SSL
-    echo "Creating site_config.json..."
-    cat > /app/elearning-bench/sites/learn.local/site_config.json <<EOF
+if [ ! -f "$SITE_PATH/site_config.json" ] || [ ! -f "$APP_INSTALLED_FLAG" ]; then
+    if [ ! -f "$SITE_PATH/site_config.json" ]; then
+        echo "site_config.json not found. Creating new site structure for $SITE_NAME_VAR..."
+
+        bench new-site "$SITE_NAME_VAR" \
+            --db-name "$DB_NAME_APP" \
+            --db-password "temppassword" \
+            --db-host "$DB_HOST" \
+            --db-port "$DB_PORT" \
+            --db-type mariadb \
+            --admin-password "$ADMIN_PASSWORD" \
+            --no-setup-db \
+            --force
+
+        echo "Site structure for $SITE_NAME_VAR created."
+    else
+        echo "site_config.json found, but app may not be installed or configured."
+    fi
+
+    echo "Configuring $SITE_PATH/site_config.json..."
+    cat > "$SITE_PATH/site_config.json" <<EOF
 {
-    "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com",
-    "db_port": 23211,
-    "db_name": "defaultdb",
-    "db_user": "avnadmin",
-    "db_password": "AVNS_tQP-rD9ZqxsBUkELuvy",
+    "db_host": "$DB_HOST",
+    "db_port": $DB_PORT,
+    "db_name": "$DB_NAME_APP",
+    "db_user": "$DB_USER_APP",
+    "db_password": "$DB_PASSWORD_APP",
     "db_type": "mariadb",
-    "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem",
-    "db_ssl_cert": "",
-    "db_ssl_key": "",
-    "db_ssl_check_hostname": false,
-    "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379",
-    "redis_queue": "redis://red-d0194tqdbo4c73fvoe0g:6379",
-    "redis_socketio": "redis://red-d0194tqdbo4c73fvoe0g:6379",
+    "db_ssl_ca": "$CA_PEM_FILE",
+    "redis_cache": "$REDIS_CACHE_URL",
+    "redis_queue": "$REDIS_QUEUE_URL",
+    "redis_socketio": "$REDIS_SOCKETIO_URL",
     "allow_cors": "*",
-    "auto_email_id": "yourgmail@gmail.com",
+    "auto_email_id": "$AUTO_EMAIL_ID",
     "cors_header_whitelist": [
         "X-Frappe-CSRF-Token",
         "X-Requested-With",
@@ -75,36 +87,41 @@ if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-b
         "Accept",
         "Content-Type"
     ],
-    "email_account": "yourgmail@gmail.com",
-    "encryption_key": "_H6tXHWcA_3EuZr-zOXHoBJi0FDL2HG4zy0eguOgIBk=",
-    "frontend_url": "${FRONTEND_URL}",
+    "email_account": "$EMAIL_ACCOUNT",
+    "encryption_key": "$ENCRYPTION_KEY",
+    "frontend_url": "$FRONTEND_URL",
     "jwt_expiry": 86400,
-    "jwt_secret": "ac9a52e8d71280e60d08b07c6f2b6a1d9f8bb0ff9d84155676cfb0f8938ad76b",
-    "mail_login": "yourgmail@gmail.com",
-    "mail_password": "yourapppassword",
-    "smtp_port": "587",
-    "smtp_server": "smtp.gmail.com",
-    "gemini_api_key": "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE",
-    "use_tls": 1
+    "jwt_secret": "$JWT_SECRET",
+    "mail_login": "$MAIL_LOGIN",
+    "mail_password": "$MAIL_PASSWORD",
+    "smtp_port": "$SMTP_PORT",
+    "smtp_server": "$SMTP_SERVER",
+    "gemini_api_key": "$GEMINI_API_KEY",
+    "use_tls": 1,
+    "developer_mode": 0,
+    "socketio_port": $PORT
 }
 EOF
-    
-    # Cài đặt ứng dụng elearning
-    echo "Installing elearning app..."
-    bench --site learn.local install-app elearning
-    
-    # Import dữ liệu mẫu (fixtures)
-    echo "Importing fixtures..."
-    bench --site learn.local import-fixtures
-    
-    echo "Site setup completed!"
+    echo "DEBUG: Contents of $SITE_PATH/site_config.json after configuration:"
+    cat "$SITE_PATH/site_config.json"
+
+    echo "Running initial database migrations for $SITE_NAME_VAR..."
+    bench --site "$SITE_NAME_VAR" migrate
+    echo "Initial database migrations completed."
+
+    echo "Installing elearning app on $SITE_NAME_VAR..."
+    bench --site "$SITE_NAME_VAR" install-app elearning
+    touch "$APP_INSTALLED_FLAG"
+    echo "elearning app installed."
+
 else
-    echo "Site learn.local already exists, skipping setup..."
+    echo "Site $SITE_NAME_VAR and app 'elearning' appear to be already set up and configured."
+    echo "Running database migrations for $SITE_NAME_VAR (for updates)..."
+    bench --site "$SITE_NAME_VAR" migrate
+    echo "Database migrations completed."
 fi
 
-# Sử dụng site mặc định
-bench use learn.local
+bench use "$SITE_NAME_VAR"
 
-# Khởi động Frappe server
-echo "Starting Frappe server..."
-bench serve --port "$PORT"
+echo "Starting Frappe server for site $SITE_NAME_VAR on port $PORT..."
+bench serve --port "$PORT" 
