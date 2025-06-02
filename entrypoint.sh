@@ -33,7 +33,7 @@ if [ ! -f "$SITE_PATH/site_config.json" ]; then
         --db-port 23211 \
         --db-user avnadmin \
         --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
-        --db-type mysql \
+        --db-type mariadb \
         --force \
         --no-mariadb-socket
 
