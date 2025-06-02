@@ -29,10 +29,10 @@ if [ ! -f "$SITE_PATH/site_config.json" ]; then
 
     # Create new site with MySQL connection (Aiven)
     bench new-site "$SITE_NAME" \
-        --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
-        --db-port 23211 \
-        --db-user avnadmin \
-        --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
+        --db-host mariadb://elearning_newsuseful:f6d21f0ba5c1b4c7ef78f4ce9ff4afcaf71cfa58@equih.h.filess.io:61000/elearning_newsuseful \
+        --db-port 61000 \
+        --db-user elearning_newsuseful \
+        --db-password f6d21f0ba5c1b4c7ef78f4ce9ff4afcaf71cfa58 \
         --db-type mariadb \
         --force \
         --no-mariadb-socket
@@ -44,7 +44,7 @@ if [ ! -f "$SITE_PATH/site_config.json" ]; then
     # Set custom configs via `bench set-config`
     echo "⚙️ Setting additional site config values..."
 
-    bench --site "$SITE_NAME" set-config db_ssl_ca "$CA_CERT_PATH"
+    #bench --site "$SITE_NAME" set-config db_ssl_ca "$CA_CERT_PATH"
     bench --site "$SITE_NAME" set-config redis_cache "redis://red-d0194tqdbo4c73fvoe0g:6379"
     bench --site "$SITE_NAME" set-config redis_queue "redis://red-d0194tqdbo4c73fvoe0g:6379"
     bench --site "$SITE_NAME" set-config redis_socketio "redis://red-d0194tqdbo4c73fvoe0g:6379"
