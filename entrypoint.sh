@@ -29,13 +29,16 @@ if [ ! -f "$SITE_PATH/site_config.json" ]; then
 
     # Create new site with MySQL connection (Aiven)
     bench new-site "$SITE_NAME" \
-        --db-host mariadb://elearning_newsuseful:f6d21f0ba5c1b4c7ef78f4ce9ff4afcaf71cfa58@equih.h.filess.io:61000/elearning_newsuseful \
-        --db-port 61000 \
-        --db-root-username elearning_newsuseful \
-        --db-password f6d21f0ba5c1b4c7ef78f4ce9ff4afcaf71cfa58 \
-        --db-type mariadb \
-        --force \
-        --no-mariadb-socket
+            --db-name elearning_newsuseful \
+            --mariadb-root-username '' \
+            --mariadb-root-password '' \
+            --db-type mariadb \
+            --db-host equih.h.filess.io \
+            --db-port 61000 \
+            --db-user elearning_newsuseful \
+            --db-password f6d21f0ba5c1b4c7ef78f4ce9ff4afcaf71cfa58 \
+            --mariadb-user-host-login-scope='%' \
+            --no-confirm
 
     # Install your custom app
     echo "📦 Installing elearning app..."
