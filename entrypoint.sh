@@ -1,92 +1,86 @@
 #!/bin/bash
 
-# Enable debugging mode for the script - this will print each command before execution
-set -x
+# Enable debugging and exit on error
+set -xe
 
-mkdir -p /app/elearning-bench/sites/learn.local/logs
+# Define paths and variables
+SITE_NAME="learn.local"
+SITE_PATH="/app/elearning-bench/sites/$SITE_NAME"
+LOG_DIR="$SITE_PATH/logs"
+CA_CERT_PATH="$SITE_PATH/ca.pem"
 
-# Tạo file ca.pem từ environment variable
+# Ensure log directory exists
+mkdir -p "$LOG_DIR"
+
+# Redirect all output to a log file as well as stdout
+exec > >(tee "$LOG_DIR/setup.log") 2>&1
+
+# Write CA certificate if available
 if [ -n "$CA_PEM_CONTENT" ]; then
-    echo "$CA_PEM_CONTENT" > /app/elearning-bench/sites/learn.local/ca.pem
-    echo "CA certificate created successfully"
+    echo "$CA_PEM_CONTENT" > "$CA_CERT_PATH"
+    echo "✅ CA certificate written to $CA_CERT_PATH"
 else
-    echo "Warning: CA_PEM_CONTENT environment variable not set"
+    echo "⚠️ Warning: CA_PEM_CONTENT environment variable not set"
 fi
 
-# Kiểm tra xem site đã tồn tại chưa
-if [ ! -d "/app/elearning-bench/sites/learn.local" ] || [ ! -f "/app/elearning-bench/sites/learn.local/site_config.json" ]; then
-    echo "Creating new site learn.local..."
+# Check if site already exists
+if [ ! -f "$SITE_PATH/site_config.json" ]; then
+    echo "🛠️ Creating new site $SITE_NAME..."
 
-    
-    # Tạo site với database connection
-    bench new-site learn.local \
+    # Create new site with MySQL connection (Aiven)
+    bench new-site "$SITE_NAME" \
         --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
         --db-port 23211 \
-        --db-name defaultdb \
-        --db-user defaultdb \
-        --db-password AVNS_ZbP6vmS8OvXyTRa3iGK \
+        --db-user avnadmin \
+        --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
         --db-type mysql \
-        --force
-    
-    # Cài đặt app elearning
-    echo "Installing elearning app..."
-    bench --site learn.local install-app elearning
-    
-    # Cấu hình site với thông tin đầy đủ
-    echo "Configuring site..."
-    SITE_CONFIG_CONTENT='{
-        "db_host": "frappe-mysql-minhquyle2302-0634.g.aivencloud.com",
-        "db_port": 23211,
-        "db_name": "defaultdb",
-        "db_user": "defaultdb",
-        "db_password": "AVNS_ZbP6vmS8OvXyTRa3iGK",
-        "db_type": "mysql",
-        "db_ssl_ca": "/app/elearning-bench/sites/learn.local/ca.pem",
-        "redis_cache": "redis://red-d0194tqdbo4c73fvoe0g:6379",
-        "redis_queue": "redis://red-d0194tqdbo4c73fvoe0g:6379",
-        "redis_socketio": "redis://red-d0194tqdbo4c73fvoe0g:6379",
-        "allow_cors": "*",
-        "auto_email_id": "yourgmail@gmail.com",
-        "cors_header_whitelist": [
-            "X-Frappe-CSRF-Token",
-            "X-Requested-With",
-            "Authorization",
-            "Accept",
-            "Content-Type"
-        ],
-        "email_account": "yourgmail@gmail.com",
-        "encryption_key": "_H6tXHWcA_3EuZr-zOXHoBJi0FDL2HG4zy0eguOgIBk=",
-        "frontend_url": "'"$FRONTEND_URL"'",
-        "jwt_expiry": 86400,
-        "jwt_secret": "ac9a52e8d71280e60d08b07c6f2b6a1d9f8bb0ff9d84155676cfb0f8938ad76b",
-        "mail_login": "yourgmail@gmail.com",
-        "mail_password": "yourapppassword",
-        "smtp_port": "587",
-        "smtp_server": "smtp.gmail.com",
-        "gemini_api_key": "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE",
-        "use_tls": 1
-    }'
-    echo "$SITE_CONFIG_CONTENT" > /app/elearning-bench/sites/learn.local/site_config.json
-    
-    # DEBUG: Print the content of site_config.json after creation/update
-    echo "DEBUG: Contents of /app/elearning-bench/sites/learn.local/site_config.json after configuration:"
-    cat /app/elearning-bench/sites/learn.local/site_config.json
-    
+        --force \
+        --no-mariadb-socket
+
+    # Install your custom app
+    echo "📦 Installing elearning app..."
+    bench --site "$SITE_NAME" install-app elearning
+
+    # Set custom configs via `bench set-config`
+    echo "⚙️ Setting additional site config values..."
+
+    bench --site "$SITE_NAME" set-config db_ssl_ca "$CA_CERT_PATH"
+    bench --site "$SITE_NAME" set-config redis_cache "redis://red-d0194tqdbo4c73fvoe0g:6379"
+    bench --site "$SITE_NAME" set-config redis_queue "redis://red-d0194tqdbo4c73fvoe0g:6379"
+    bench --site "$SITE_NAME" set-config redis_socketio "redis://red-d0194tqdbo4c73fvoe0g:6379"
+    bench --site "$SITE_NAME" set-config allow_cors "*"
+    bench --site "$SITE_NAME" set-config frontend_url "$FRONTEND_URL"
+    bench --site "$SITE_NAME" set-config jwt_expiry 86400
+    bench --site "$SITE_NAME" set-config jwt_secret "ac9a52e8d71280e60d08b07c6f2b6a1d9f8bb0ff9d84155676cfb0f8938ad76b"
+    bench --site "$SITE_NAME" set-config use_tls 1
+
+    # Email settings
+    bench --site "$SITE_NAME" set-config auto_email_id "yourgmail@gmail.com"
+    bench --site "$SITE_NAME" set-config mail_login "yourgmail@gmail.com"
+    bench --site "$SITE_NAME" set-config mail_password "yourapppassword"
+    bench --site "$SITE_NAME" set-config smtp_port "587"
+    bench --site "$SITE_NAME" set-config smtp_server "smtp.gmail.com"
+
+    # Gemini API
+    bench --site "$SITE_NAME" set-config gemini_api_key "AIzaSyDfu_ZHRaX5NMxlysHyMM8dlMNeVeqkqtE"
+
+    # Run migrations to apply settings
+    bench --site "$SITE_NAME" migrate
+
     # Import fixtures
-    echo "Importing fixtures..."
-    bench --site learn.local import-fixtures
-    
-    echo "Site setup completed!"
+    echo "📥 Importing fixtures..."
+    bench --site "$SITE_NAME" import-fixtures
+
+    echo "✅ Site setup completed!"
 else
-    echo "Site learn.local already exists, skipping setup..."
-    # DEBUG: Print the content of site_config.json if it already exists
-    echo "DEBUG: Contents of existing /app/elearning-bench/sites/learn.local/site_config.json:"
-    cat /app/elearning-bench/sites/learn.local/site_config.json
+    echo "✅ Site $SITE_NAME already exists, skipping creation."
+    echo "📄 Current site config:"
+    cat "$SITE_PATH/site_config.json"
 fi
 
-# Set site mặc định
-bench use learn.local
+# Set default site for bench commands
+bench use "$SITE_NAME"
 
-# Khởi động Frappe server
-echo "Starting Frappe server..."
-bench serve --port $PORT
+# Start Frappe (development mode)
+echo "🚀 Starting Frappe server on port ${PORT:-8000}..."
+bench serve --port "${PORT:-8000}"
