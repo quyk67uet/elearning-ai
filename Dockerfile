@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     libmariadb-dev-compat \
     libmariadb-dev \
+    mariadb-client \ 
     git \
     curl \
     cron \
@@ -49,19 +50,16 @@ COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
 # 12. Cài đặt dependencies của app elearning
 RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
 
-# 13. Tạo thư mục sites/learn.local (sẽ được dùng bởi entrypoint)
-RUN mkdir -p /app/elearning-bench/sites/learn.local
+# 13. Tạo thư mục sites (sẽ được dùng bởi entrypoint)
+# Tên site 'learn.local' có thể được thay bằng biến môi trường nếu muốn linh hoạt hơn
+RUN mkdir -p /app/elearning-bench/sites/${SITE_NAME_VAR:-learn.local} # Sử dụng biến môi trường nếu có
 
 # 13a. Tạo file ca.pem placeholder (sẽ được cập nhật trong entrypoint)
-RUN touch /app/elearning-bench/sites/learn.local/ca.pem
-
-# Việc tạo common_site_config.json và site_config.json sẽ được thực hiện trong entrypoint.sh
-# dựa trên các biến môi trường để đảm bảo tính linh hoạt và bảo mật.
+RUN touch /app/elearning-bench/sites/${SITE_NAME_VAR:-learn.local}/ca.pem
 
 # 14. Copy entrypoint.sh vào container
 COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh
 RUN chmod +x /app/elearning-bench/entrypoint.sh
 
 # 15. Sử dụng entrypoint.sh để khởi động
-# PORT sẽ được Render tự động cung cấp
 CMD ["/app/elearning-bench/entrypoint.sh"]
