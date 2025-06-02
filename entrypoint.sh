@@ -4,7 +4,7 @@
 set -xe
 
 # Define paths and variables
-SITE_NAME="learn2.local"
+SITE_NAME="learn3.local"
 SITE_PATH="/app/elearning-bench/sites/$SITE_NAME"
 LOG_DIR="$SITE_PATH/logs"
 CA_CERT_PATH="$SITE_PATH/ca.pem"
@@ -27,16 +27,20 @@ fi
 if [ ! -f "$SITE_PATH/site_config.json" ]; then
     echo "🛠️ Creating new site $SITE_NAME..."
 
-    # Create new site with MySQL connection (Aiven)
+    # Create new site without creating DB (we already have DB & user)
     bench new-site "$SITE_NAME" \
+        --db-name defaultdb \
+        --db-type mariadb \
         --db-host frappe-mysql-minhquyle2302-0634.g.aivencloud.com \
         --db-port 23211 \
         --db-root-username avnadmin \
         --db-password AVNS_tQP-rD9ZqxsBUkELuvy \
-        --db-type mariadb \
-        --force \
-        --no-mariadb-socket
+        --no-db-create \
+        --no-mariadb-socket \
+        --force
 
+    # Set SSL CA cert (required for Aiven)
+    bench --site "$SITE_NAME" set-config db_ssl_ca "$CA_CERT_PATH"
 
     # Install your custom app
     echo "📦 Installing elearning app..."
@@ -45,7 +49,6 @@ if [ ! -f "$SITE_PATH/site_config.json" ]; then
     # Set custom configs via `bench set-config`
     echo "⚙️ Setting additional site config values..."
 
-    bench --site "$SITE_NAME" set-config db_ssl_ca "$CA_CERT_PATH"
     bench --site "$SITE_NAME" set-config redis_cache "redis://red-d0194tqdbo4c73fvoe0g:6379"
     bench --site "$SITE_NAME" set-config redis_queue "redis://red-d0194tqdbo4c73fvoe0g:6379"
     bench --site "$SITE_NAME" set-config redis_socketio "redis://red-d0194tqdbo4c73fvoe0g:6379"
