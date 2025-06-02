@@ -1,7 +1,6 @@
 #!/bin/bash
-set -xe # Exit on error, print commands
+set -xe 
 
-# --- Biến môi trường cần được set (thông qua docker-compose.yml) ---
 : "${DB_HOST?DB_HOST not set or empty}"
 : "${DB_PORT?DB_PORT not set or empty}"
 : "${DB_NAME_APP?DB_NAME_APP not set or empty}"
@@ -10,12 +9,12 @@ set -xe # Exit on error, print commands
 : "${REDIS_CACHE_URL?REDIS_CACHE_URL not set or empty}"
 : "${REDIS_QUEUE_URL?REDIS_QUEUE_URL not set or empty}"
 : "${REDIS_SOCKETIO_URL?REDIS_SOCKETIO_URL not set or empty}"
-: "${FRONTEND_URL?FRONTEND_URL not set or empty}" # URL public của Frontend mà Frappe sẽ dùng
+: "${FRONTEND_URL?FRONTEND_URL not set or empty}" 
 : "${JWT_SECRET?JWT_SECRET not set or empty}"
 : "${ENCRYPTION_KEY?ENCRYPTION_KEY not set or empty}"
 : "${SITE_NAME_VAR?SITE_NAME_VAR not set or empty}"
 : "${ADMIN_PASSWORD?ADMIN_PASSWORD not set or empty}"
-: "${PORT?PORT not set or empty}" # Port Frappe lắng nghe bên trong container
+: "${PORT?PORT not set or empty}" 
 : "${AUTO_EMAIL_ID?AUTO_EMAIL_ID not set or empty}"
 : "${EMAIL_ACCOUNT?EMAIL_ACCOUNT not set or empty}"
 : "${MAIL_LOGIN?MAIL_LOGIN not set or empty}"
@@ -31,7 +30,6 @@ APP_INSTALLED_FLAG="$SITE_PATH/.app_elearning_installed"
 
 mkdir -p "$SITE_PATH/logs"
 
-# Hàm để tạo nội dung site_config.json
 generate_site_config_content() {
     cat <<EOF
 {
@@ -70,7 +68,6 @@ generate_site_config_content() {
 EOF
 }
 
-# Luôn tạo/cập nhật site_config.json để đảm bảo nó đồng bộ với biến môi trường
 echo "Ensuring $SITE_CONFIG_FILE is configured correctly..."
 generate_site_config_content > "$SITE_CONFIG_FILE"
 echo "DEBUG: Contents of $SITE_CONFIG_FILE after ensuring configuration:"
@@ -80,13 +77,10 @@ cat "$SITE_CONFIG_FILE"
 if [ ! -f "$APP_INSTALLED_FLAG" ]; then
     echo "Application not fully installed yet. Proceeding with site creation and app installation..."
 
-    # Kiểm tra xem site đã tồn tại trong bench chưa, nếu chưa thì tạo mới
-    if ! bench list-sites | grep -q "^$SITE_NAME_VAR$"; then
+    if [ ! -d "sites/$SITE_NAME_VAR" ]; then
         echo "Site $SITE_NAME_VAR not found in bench list-sites. Running new-site..."
-        # bench new-site sẽ đọc site_config.json mà chúng ta vừa tạo ở trên
-        # để lấy thông tin DB (bao gồm db_user) cho các thao tác ban đầu của nó.
         bench new-site "$SITE_NAME_VAR" \
-            --db-name "$DB_NAME_APP" \ # Vẫn cần để bench biết tên site
+            --db-name "$DB_NAME_APP" \ 
             --db-type mariadb \
             --admin-password "$ADMIN_PASSWORD" \
             --force 
@@ -106,7 +100,6 @@ if [ ! -f "$APP_INSTALLED_FLAG" ]; then
 
 else
     echo "Site $SITE_NAME_VAR and app 'elearning' appear to be already set up."
-    # site_config.json đã được cập nhật ở đầu script.
     echo "Running database migrations for $SITE_NAME_VAR (for updates)..."
     bench --site "$SITE_NAME_VAR" migrate
     echo "Database migrations completed."

@@ -3,7 +3,7 @@ version: '3.8'
 services:
   frappe:
     build:
-      context: . # Context là thư mục hiện tại, nơi chứa Dockerfile và thư mục 'elearning'
+      context: . 
       dockerfile: Dockerfile
       args:
         FRAPPE_BRANCH: version-15
@@ -12,8 +12,6 @@ services:
     ports:
       - "${APP_PORT:-8000}:${PORT:-8000}"
     volumes:
-      # Mount toàn bộ app Frappe 'elearning' để phát triển (thay đổi code sẽ được phản ánh)
-      # Điều này hữu ích cho development, có thể bỏ qua hoặc chỉ mount thư mục con nếu muốn cho production build
       - ./elearning:/app/elearning-bench/apps/elearning
       - frappe_sites:/app/elearning-bench/sites
     environment:
@@ -88,7 +86,7 @@ services:
     networks:
       - elearning-network
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "${MARIADB_USER:-elearning_user}", "-p${MARIADB_PASSWORD:-ChangeThisStrongPassword1!}"]
+      test: bash -c 'mysqladmin ping -h localhost -u "$$MARIADB_USER" -p"$$MARIADB_PASSWORD"'
       interval: 10s
       timeout: 5s
       retries: 5
