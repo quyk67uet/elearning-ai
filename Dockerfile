@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     libmariadb-dev-compat \
     libmariadb-dev \
-    mariadb-client \ 
+    mariadb-client \
     git \
     curl \
     cron \
@@ -39,23 +39,23 @@ RUN pip install --user --upgrade pip \
 ENV PATH="/home/frappe/.local/bin:$PATH"
 
 # 9. Khởi tạo elearning-bench (skip cron setup for container environment)
-RUN bench init --skip-redis-config-generation --no-backups elearning-bench --frappe-branch version-15
+ARG FRAPPE_BRANCH=version-15
+RUN bench init --skip-redis-config-generation --no-backups elearning-bench --frappe-branch ${FRAPPE_BRANCH}
 
 # 10. Chuyển đến thư mục elearning-bench
 WORKDIR /app/elearning-bench
 
-# 11. Copy app elearning từ repository
-COPY --chown=frappe:frappe . /app/elearning-bench/apps/elearning
+# 11. Copy toàn bộ app Frappe 'elearning' vào thư mục apps của bench
+COPY --chown=frappe:frappe ./elearning /app/elearning-bench/apps/elearning
 
 # 12. Cài đặt dependencies của app elearning
-RUN pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt
+RUN if [ -f /app/elearning-bench/apps/elearning/requirements.txt ]; then \
+        pip install --user -r /app/elearning-bench/apps/elearning/requirements.txt; \
+    fi
 
 # 13. Tạo thư mục sites (sẽ được dùng bởi entrypoint)
-# Tên site 'learn.local' có thể được thay bằng biến môi trường nếu muốn linh hoạt hơn
-RUN mkdir -p /app/elearning-bench/sites/${SITE_NAME_VAR:-learn.local} # Sử dụng biến môi trường nếu có
-
-# 13a. Tạo file ca.pem placeholder (sẽ được cập nhật trong entrypoint)
-RUN touch /app/elearning-bench/sites/${SITE_NAME_VAR:-learn.local}/ca.pem
+RUN mkdir -p /app/elearning-bench/sites/${SITE_NAME_VAR:-learn.local}
+RUN mkdir -p /app/elearning-bench/config
 
 # 14. Copy entrypoint.sh vào container
 COPY --chown=frappe:frappe entrypoint.sh /app/elearning-bench/entrypoint.sh

@@ -1,0 +1,117 @@
+version: '3.8'
+
+services:
+  frappe:
+    build:
+      context: . # Context là thư mục hiện tại, nơi chứa Dockerfile và thư mục 'elearning'
+      dockerfile: Dockerfile
+      args:
+        FRAPPE_BRANCH: version-15
+    container_name: frappe_elearning
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8000}:${PORT:-8000}"
+    volumes:
+      # Mount toàn bộ app Frappe 'elearning' để phát triển (thay đổi code sẽ được phản ánh)
+      # Điều này hữu ích cho development, có thể bỏ qua hoặc chỉ mount thư mục con nếu muốn cho production build
+      - ./elearning:/app/elearning-bench/apps/elearning
+      - frappe_sites:/app/elearning-bench/sites
+    environment:
+      # --- Database Connection (trỏ đến service 'db') ---
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME_APP=${MARIADB_DATABASE:-elearning_db}
+      - DB_USER_APP=${MARIADB_USER:-elearning_user}
+      - DB_PASSWORD_APP=${MARIADB_PASSWORD:-ChangeThisStrongPassword1!}
+
+      # --- Redis Connection (trỏ đến service 'redis') ---
+      - REDIS_CACHE_URL=redis://redis:6379/0
+      - REDIS_QUEUE_URL=redis://redis:6379/1
+      - REDIS_SOCKETIO_URL=redis://redis:6379/2
+
+      # --- Site and Frappe Configuration ---
+      - SITE_NAME_VAR=${SITE_NAME:-learn.local}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-ChangeThisAdminPassword1!}
+      - PORT=${PORT:-8000}
+
+      # --- Other Configurations ---
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost:3000}
+      - JWT_SECRET=${JWT_SECRET:-PleaseChangeThisToARandomLongStringForJWT}
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-PleaseChangeThisToARandomLongStringForEncryption}
+
+      # --- Email Configuration ---
+      - AUTO_EMAIL_ID=${AUTO_EMAIL_ID:-}
+      - EMAIL_ACCOUNT=${EMAIL_ACCOUNT:-}
+      - MAIL_LOGIN=${MAIL_LOGIN:-}
+      - MAIL_PASSWORD=${MAIL_PASSWORD:-}
+      - SMTP_SERVER=${SMTP_SERVER:-}
+      - SMTP_PORT=${SMTP_PORT:-587}
+
+      # --- API Keys ---
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - elearning-network
+
+  frontend:
+    build:
+      context: ./elearning/www/nextjs-app 
+      dockerfile: Dockerfile.nextjs
+    container_name: frontend_elearning
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_HOST_PORT:-3000}:3000"
+    env_file:
+      - ./elearning/www/nextjs-app/.env.production 
+    environment:
+      - NEXT_PUBLIC_FRAPPE_URL=${NEXT_PUBLIC_FRAPPE_URL_INTERNAL:-http://frappe:${PORT:-8000}}
+    depends_on:
+      - frappe
+    networks:
+      - elearning-network
+
+  db:
+    image: mariadb:10.11
+    container_name: mariadb_elearning
+    restart: unless-stopped
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD:-ChangeThisRootPassword1!}
+      - MARIADB_DATABASE=${MARIADB_DATABASE:-elearning_db}
+      - MARIADB_USER=${MARIADB_USER:-elearning_user}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD:-ChangeThisStrongPassword1!}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - elearning-network
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "${MARIADB_USER:-elearning_user}", "-p${MARIADB_PASSWORD:-ChangeThisStrongPassword1!}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis_elearning
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    networks:
+      - elearning-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mariadb_data:
+  redis_data:
+  frappe_sites:
+
+networks:
+  elearning-network:
+    driver: bridge
