@@ -21,7 +21,7 @@ export async function fetchWithAuth(path, options = {}) {
     ? path
     : `${API_METHOD_PREFIX}${path}`;
 
-  console.log(`Making API request to: ${baseURL}${formattedPath}`);
+  console.log(`Making API request to: ${frappeBackendUrl}${formattedPath}`);
 
   try {
     // Get session from NextAuth if on client side
