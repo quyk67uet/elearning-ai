@@ -21,7 +21,7 @@ export async function fetchWithAuth(path, options = {}) {
     ? path
     : `${API_METHOD_PREFIX}${path}`;
 
-  console.log(`Making API request to: ${formattedPath}`);
+  console.log(`Making API request to: ${baseURL}${formattedPath}`);
 
   try {
     // Get session from NextAuth if on client side
@@ -155,32 +155,41 @@ export async function fetchWithAuthServer(path, accessToken, options = {}) {
 
 // Bắt đầu phiên học Flashcard mới
 export async function startFlashcardSession(topicId, mode = "Basic") {
-  return fetchWithAuth(`flashcard_session.flashcard_session.start_flashcard_session`, {
-    method: "POST",
-    body: JSON.stringify({
-      topic_id: topicId,
-      mode: mode
-    })
-  });
+  return fetchWithAuth(
+    `flashcard_session.flashcard_session.start_flashcard_session`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        topic_id: topicId,
+        mode: mode,
+      }),
+    }
+  );
 }
 
 // Cập nhật thời gian phiên học Flashcard
 export async function updateFlashcardSessionTime(sessionId, timeSpentSeconds) {
-  return fetchWithAuth(`flashcard_session.flashcard_session.update_flashcard_session_time`, {
-    method: "POST",
-    body: JSON.stringify({
-      session_id: sessionId,
-      time_spent_seconds: timeSpentSeconds
-    })
-  });
+  return fetchWithAuth(
+    `flashcard_session.flashcard_session.update_flashcard_session_time`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        session_id: sessionId,
+        time_spent_seconds: timeSpentSeconds,
+      }),
+    }
+  );
 }
 
 // Kết thúc phiên học Flashcard
 export async function endFlashcardSession(sessionId) {
-  return fetchWithAuth(`flashcard_session.flashcard_session.end_flashcard_session`, {
-    method: "POST",
-    body: JSON.stringify({
-      session_id: sessionId
-    })
-  });
+  return fetchWithAuth(
+    `flashcard_session.flashcard_session.end_flashcard_session`,
+    {
+      method: "POST",
+      body: JSON.stringify({
+        session_id: sessionId,
+      }),
+    }
+  );
 }
